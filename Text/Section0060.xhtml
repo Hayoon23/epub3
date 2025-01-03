@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">2 가상 머신의 설치 및 시뮬레이터 구동</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_80"><span class="txtball dwhite">가</span> 가상 머신의 설치</h3>
+
+  <p class="txt indent1">앞서 언급한 두 가지 가상 머신 중 어느 것을 고르더라도 사용상의 큰 차이는 없다. 이 책에서는 Oracle사의 VirtualBox를 사용해 보려고 한다.</p>
+
+  <p class="txt indent1">먼저 프로그램을 다운로드해 보도록 하자. 프로그램은 ‘https://www.virtualbox.org/’로 들어가면 된다. 검색 사이트에서 ‘VirtualBox’를 검색해도 상단에 뜰 것이다. &#60;그림 별첨-4&#62; (a)의 ②와 같이 홈페이지의 좌측 메뉴에 ‘Downloads’를 클릭한다. &#60;그림 별첨-4&#62; (a)의 ③에서 다양한 OS를 위한 패키지 파일을 찾을 수 있다. 윈도우 환경이라면 제일 위에 있는 ‘windows hosts’를 클릭하자. 다운로드 폴더에서 ‘VirtualBox-버전.exe’ 파일을 찾을 수 있다. 더블클릭하여 설치를 시작한다. &#60;그림 별첨-4&#62; (b)와 (c)는 설치 과정을 캡처한 사진이다. 특별한 조건이 아니라면 기본적으로 ‘Next’를 하면 된다. 프로그램이 정상적으로 설치가 완료되었다면 &#60;그림 별첨-4&#62; (c)와 같은 화면을 볼 수 있다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="sup-p308-img" src="../Images/sup-p308-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="sup-p309-img" src="../Images/sup-p309-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 별첨-4&#62;</span> VirtualBox 다운로드 및 설치</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_81"><span class="txtball dwhite">나</span> 가상 머신의 구동</h3>
+
+  <p class="txt indent1">&#60;그림 별첨-5&#62;는 2장에서 다운로드한 URSim을 실제 구동하는 과정이다. &#60;그림 별첨-5&#62; (a)의 ①의 ‘추가’를 누르면 추가하고자 하는 시뮬레이션 장치 파일을 선택할 수 있다. 앞서 압축 해제하였던 폴더로 이동하면 추가할 수 있는 파일이 보인다. 선택이 완료되면 &#60;그림 별첨-5&#62; (b)의 ①과 같이 추가된 가상 환경이 보인다. 이것을 선택하여 &#60;그림 별첨-5&#62; (b) ②의 ‘시작’ 버튼을 누르면 선택된 가상 환경이 실행된다. 많은 경우 &#60;그림 별첨-5&#62; (b) ③과 같은 오류가 발생하는데, 이를 해결하기 위해서는 PC의 바이오스 세팅을 조금 수정해줘야 한다.</p>
+
+  <p class="txt indent1">PC를 다시 시작하여 메인보드의 바이오스 셋업 화면으로 들어가자. ‘SVM mode’에 대한 옵션을 찾을 수 있다. 찾기 힘들다면 바이오스의 ‘검색’ 기능을 활용하는 것도 좋은 방법이다. 이 옵션의 위치는 메인보드 제작사마다 차이가 있으므로, 각 제조사의 홈페이지를 참조하기를 바란다. 많은 경우 이 옵션은 ‘Disabled’이 기본값인데, 이 값을 반드시 ‘Enabled’로 변경해야 한다.</p>
+
+  <div class="tip_icon"></div>
+
+  <div class="tipbox">
+    <p class="txt gothic_m">가상 머신 프로그램을 사용하기 위해서는 메인보드 바이오스 셋업에서 ‘SVM mode’의 옵션을 ‘Enabled’로 변경해 주어야 한다.</p>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="sup-p310-img" src="../Images/sup-p310-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="sup-p311-img" src="../Images/sup-p311-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 별첨-5&#62;</span> VirtualBox 실행 및 일반적 오류 사항</p>
+  </div>
+
+  <p class="txt indent1">다시 VirtualBox를 실행하고, 해당 가상 환경을 시작하면 &#60;그림 별첨-6&#62;과 같이 정상적으로 실행됨을 알 수 있다. &#60;그림 별첨-6&#62; (a)는 초기 화면으로, 로봇 프로그램을 위한 폴리스코프의 실행을 위해서는 &#60;그림 별첨-6&#62; (a)의 ① 아이콘을 클릭해야 한다. 각 프로그램은 4개의 로봇 모델<span class="bracket">(UR3e, UR5e, UR10e, UR16e)</span>에 대한 폴리스코프를 의미한다. 실행하면 &#60;그림 별첨-6&#62; (b)와 같이 실제 폴리스코프와 같은 환경이 사용자에게 보인다.</p>
+
+  <p class="txt indent1">다시 한번 언급하지만, 실제 로봇 팔이 연결되어 있지 않기 때문에 시뮬레이터에는 힘 제어 및 외부 장치, 엔드-이펙터<span class="bracket">(end-effector)</span> 등 사용에 대한 제약은 존재한다. 일부 I/O는 왼쪽 아래 끝 모서리의 시뮬레이션 모드를 선택하여 사용할 수 있다. 약간의 제약 사항은 존재하지만, 실제 로봇을 가지고 훈련하기 어려운 환경 혹은 갑자기 떠오른 아이디어를 구현하고자 하는 독자들에게는 유용할 것으로 생각된다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="sup-p312-img" src="../Images/sup-p312-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="sup-p312-img2" src="../Images/sup-p312-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 별첨-6&#62;</span> URSim 실행</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">2 순서도</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_52"><span class="txtball dwhite">가</span> 순서도의 필요성</h3>
+
+  <p class="txt indent1">프로그램을 작성하거나 개선할 때, 순서도<span class="본문_단어_색변경-각주-9-5-20 CharOverride-13">(Flowchart)</span>는 매우 유용한 도구가 될 수 있다. 순서도란 프로세스나 문제를 해결하기 위한 논리적인 절차를 다양한 기호와 화살표로 표현한 다이어그램으로, 프로그래밍에서 사용하는 이유는 다음과 같다.</p>
+
+  <p class="txt indent1">첫 번째 이유는 프로그램의 흐름과 구조를 쉽게 파악할 수 있게 해주기 때문이다. 순서도를 보면 프로그램이 어떤 입력을 받고, 어떤 조건에 따라 어떤 처리를 하고, 어떤 출력을 내보내는지 한눈에 알 수 있다. 이렇게 프로그램의 전체적인 개요를 이해하는 것은 프로그램의 설계나 수정에 도움이 된다.</p>
+
+  <p class="txt indent1">두 번째 이유는 개발된 프로그램의 논리적인 오류를 찾고 수정이 쉬워진다. 순서도를 작성하면서 프로그램의 각 단계가 올바르게 연결되었는지, 필요한 조건이나 반복이 적절하게 적용되었는지, 불필요한 중복이나 누락이 없는지 검토할 수 있다. 또한 테스트 케이스를 따라가면서 프로그램의 실행 결과가 예상과 일치하는지 확인할 수 있다.</p>
+
+  <p class="txt indent1">세 번째 이유는 프로그램의 문서화와 전달에 도움이 된다. 프로그래밍 언어와 상관없이 일관된 기호와 규칙으로 작성되므로, 다른 프로그래머에게 해당 프로그램의 내용과 기능을 설명하기 쉽다. 또한 프로그램의 보관과 유지보수에 필요한 자료로 활용될 수 있다.</p>
+
+  <p class="txt indent1">&#60;그림 X-5&#62;는 프로그램을 순서도로 표현한 예이다.</p>
+
+  <p class="txt">&#160;</p>
+
+  <div class="w70 img_center flex_column">
+    <img alt="part10-p226-img" src="../Images/part10-p226-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅹ-5&#62;</span> <span class="본문_본문_표_일반 _idGenCharOverride-3">순서도 활용 예시</span></p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_53"><span class="txtball dwhite">나</span> 순서도의 구성 요소</h3>
+
+  <p class="txt indent1">순서도를 구성하는 구성 요소는 문헌마다 조금씩 차이가 있으며, 많은 경우 십여 가지 이상을 이야기하는 것도 있다. 구성 요소의 이름이나 표시 방법 역시 문헌마다 조금씩 차이가 있다. 이 책에서는 &#60;표 X-1&#62;의 로봇 동작을 구현할 때 가장 핵심적으로 사용되는 6개의 블록 요소만을 언급하도록 하겠다.</p>
+
+  <p class="txt number_list ml3">① 단말: 프로그램이 시작되거나 종료되는 지점을 의미하는 블록으로, 타원형 도형으로 표현한다.</p>
+
+  <p class="txt number_list ml3">② 흐름선: 프로그램의 흐름을 알려주는 것으로 화살표 혹은 선으로 표현한다. 한 방향으로만 흐른다는 특징이 있으며, 교차할 때는 하나의 화살표가 다른 하나를 가로지르도록 표현한다.</p>
+
+  <p class="txt number_list ml3">③ 처리: 프로그램이 수행하는 연산이나 할당 등의 처리하는 기능을 의미하는 블록으로, 직사각형 도형으로 표현한다. 내부에 처리 내용을 간단하게 적는다.</p>
+
+  <p class="txt number_list ml3">④ 서브루틴: 다수의 단위 명령어를 결합하여 다소 복잡한 구조로 모듈화된 형태의 사용자 생성 서브프로그램<span class="bracket">(Subprogram)</span>을 재사용하기 위해서 서브루틴이라는 개념을 사용할 수 있다. 사용 방법은 별도의 페이지에 순서도로 표현하고, 메인루틴<span class="bracket">(Main Routine)</span>에서는 호출하여 활용한다.</p>
+
+  <p class="txt number_list ml3">⑤ 입출력: 프로그램에서 데이터를 입력받거나 출력하는 지점을 의미하는 블록으로, 평행사변형 도형으로 표현한다. 입력은 Input, 출력은 Output이라고 적고, 입력받거나 출력하는 데이터를 괄호 안에 적는다.</p>
+
+  <p class="txt number_list ml3">⑥ 판단: 다른 문헌에서는 ‘조건’이라고도 이야기하는데, 프로그램에서 조건식을 판단하여 참이면 한 방향으로, 거짓이면 다른 방향으로 분기하는 지점을 나타내는 블록으로, 마름모형 도형으로 표현한다. 사용 방법은 조건식을 적고, 참과 거짓에 따른 분기 방향을 화살표에 적는다.</p>
+
+  <div class="img_center flex_column">
+    <p class="imgcaption2"><span class="gothic_b dblue">&#60;표 Ⅹ-1&#62;</span> 순서도의 주요 구성 요소</p>
+
+    <img alt="part10-p228-table" src="../Images/part10-p228-table.jpg"/>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_54"><span class="txtball dwhite">다</span> 순서도의 활용</h3>
+
+  <p class="txt indent1">&#60;그림 X-5&#62;는 순서도의 활용 예이다. &#60;그림 X-5&#62; (a)와 같은 사과 선별 시스템을 생각해 보자. 이 시스템은 사과를 선별하여 상자에 담은 로봇의 기능을 가진다. 한 상자에는 최대 3개의 사과를 담을 수 있고, 모든 사과는 ‘특’, ‘상’, ‘중’이라는 3개의 품질로 구분한다. 품질을 분류하는 과정은 비전 장치 등의 특별한 장치가 사용되고, 그 장치는 사과 품질에 따라 1, 2, 3 및 에러 숫자를 반환한다. 로봇은 이 반환 값을 이용하여 포장 상자에 옮겨 담는 동작을 수행한다. 이 과정을 글로 표현하는 것은 간단하지만, 막상 프로그램을 구현하려고 하면 프로그래밍에 익숙하지 않은 사용자는 막막한 기분이 들 것이다.</p>
+
+  <p class="txt indent1">&#60;그림 X-5&#62; (b)는 이 동작을 순서도로 나타낸 것이다. 이렇게 순서도가 만들어지면, 이제 프로그램은 단순히 각각의 단순 기능인 블록을 참조하여 그림에 따라서 하나씩 만들어가면 된다. 본 단원에서 유심히 봐야 하는 것은 ‘완성된 순서도에서 반복되는 블록이 쉽게 관찰’된다는 것이다. 그림에서 보면 먼저 완전히 같은 기능의 반복이 눈에 띈다. 긴 파선-점선으로 표시된 ‘포스 아래 이동’ 서브루틴이다. 이 동작은 선별이 완료된 사과를 상자 상단 위치로 로봇이 적절히 이동 후 천천히 적층하는 동작으로 세 가지 조건 동작 모두에서 공통으로 활용되는 동작이다. 이 동작은 앞서 이야기한 ‘서브프로그램’을 구현하여 호출하여 사용한다면 시스템의 유지보수에 유리할 것이다. 그리고 눈에 띄는 것은 점선으로 표시된 사각형 안의 내용이다. 이 세 가지 판단<span class="bracket">(Case1, Case2, Case3)</span> 이후에 이어지는 동작이 완전히 같지는 않지만, 매우 구조 및 내용이 비슷하다 ‘특’ 상자로 이동, ‘상’ 상자로 이동, ‘중’ 상자로 이동은 단지 웨이포인트 하나만 다를 뿐이다. 마찬가지로 나머지 부분도 단지 변수<span class="bracket">(특 카운트, 상 카운트1 중 카운트 등)</span>만 다를 뿐 구조적으로 같다. 즉, 이런 경우에는 앞서 학습한 폴더를 사용한다면 프로그래밍에 필요한 시간을 단축할 수 있다. 폴더로 복사하여 붙여놓고, 일부 문장을 수정하면 된다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part10-p229-img" src="../Images/part10-p229-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅹ-5&#62;</span> 순서도 활용 예시</p>
+  </div>
+
+  <p class="txt">&#160;</p>
+
+  <div class="txtbox number_list">
+    <p class="txt">1. 지난 ‘if’ 단원 육안검사 프로젝트에서 중복되는 코드의 재활용이 불편했던 일을 상기시킨다.</p>
+
+    <p class="txt">2. 작성 프로그램이 길어짐에 따라서 프로그램의 전반의 빠른 이해가 어려워진 점을 상기시킨다.</p>
+
+    <p class="txt">3. 중복된 코드 혹은 유사한 코드의 빠른 편집을 위해서 ‘폴더’ 및 ‘서브프로그램’의 활용의 장점을 설명한다.</p>
+
+    <p class="txt">4. 폴더 및 서브프로그램의 폴리스코프에서 사용 방법을 설명한다.</p>
+
+    <p class="txt">5. 폴더와 서브프로그램의 차이를 설명하고, 적절한 사용 상황을 설명한다.</p>
+
+    <p class="txt">6. 특히, 다른 프로그램 언어의 사용자가 있다면 폴리스코프의 서브프로그램은 ‘단순 코드 복사’라는 점을 강조하여, ‘메인 스레드’와 ‘서브프로그램’ 내의 변수명이 같을 때 생기는 문제를 설명하여야 한다.</p>
+  </div>
+
+  <p class="txt gothic_b">◉ 실습과제 결과 예시</p>
+
+  <p class="txt gothic_b dblue2">■ 실습과제 구현 예시</p>
+
+  <div class="w30 img_center">
+    <img alt="part10-p231-img" src="../Images/part10-p231-img.jpg"/>
+  </div>
+</body>
+</html>

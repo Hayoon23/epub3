@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">2 폴리스코프에서 조건 구현</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_41"><span class="txtball dwhite">가</span> IF 구조문의 생성</h3>
+
+  <p class="txt indent1">폴리스코프에서 If 구조문은 &#60;그림 VII-3&#62;와 같이 ‘프로그램 탭-고급-If’를 선택하여 사용할 수 있다. 이를 선택하면 로봇 프로그램 아래로 ‘If’만 추가된다. ④ 영역에서 Elseif를 추가 혹은 삭제할 수 있고, Else도 추가할 수 있다. Else를 사용자가 추가해야 한다는 점에 유의하자. &#60;그림 VII-3&#62;은 If문 추가 이후 Elseif와 Else를 추가한 상태이다. ⑤의 f<span class="bracket">(x)</span> 버튼을 클릭하면 해당하는 조건 내용을 입력할 수 있으며, &#60;그림 VII-4&#62;과 같이 키보드 창 팝업이 뜬다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part07-p180-img" src="../Images/part07-p180-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅶ-3&#62;</span> 폴리스코프에서 If 구조문 활용</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_42"><span class="txtball dwhite">나</span> 블리언 조건의 구현</h3>
+
+  <p class="txt indent1">키보드 팝업은 &#60;그림 VII-4&#62;에서 보는 것과 같이 크게 3개의 구역으로 나누어진다. 비교 연산을 위한 연산자는 &#60;그림 VII-4&#62; (a) ②의 왼쪽 중간에 있다. 앞에서 이야기한 비교 연산자와 표시 방식에서 조금의 차이가 있는데, 그 내용은 &#60;표 VII-3&#62;과 같다.</p>
+
+  <p class="txt indent1">비교를 위해서는 피연산자에 해당하는 변수를 선택해야 하는데, 로봇 혹은 외부 입력의 상태에 대한 것은 &#60;그림 VII-4&#62; (a) ①에서 변수를 선택할 수 있다. 이 변수는 크게 5가지로 나눌 수 있는데, 각각 Input<span class="bracket">(&#60;그림 VII-4&#62; (b))</span>, Output<span class="bracket">(&#60;그림 VII-4&#62; (c))</span>, Variable, Pose, Function<span class="bracket">(&#60;그림 VII-4&#62; (d))</span>이다. &#60;그림 VII-4&#62; (a) ①에서 선택된 변수는 ③ 영역에 작성이 되며, 조건 내용의 작성은 ② 영역의 키보드를 활용한다. 한글 입력은 별도로 지원하지 않는다. 입력 변수로 사용할 수 있는 ①의 다섯 가지 변수를 하나씩 살펴보자. 먼저 Input은 컨트롤 박스 및 로봇의 입력 접점이며, 아날로그 및 디지털 모두를 포함한다. &#60;그림 VII-4&#62; (b)에서 현재 선택할 수 있는 접점을 알 수 있다. ③ 영역과 같이 ‘digital_in[1]=True’라고 한다면 조건은 디지털 입력 접점 1에서 ‘High’ 입력이라면 참이 된다. 이런 경우 If 아래에 있는 Action_A에 해당하는 동작을 수행할 것이다. 만약 Analog_in의 값을 가지고 온다면 True/False와의 비교는 불가능할 것이며, ‘analog_in[0] &#62; 5’와 같이 비교를 사용해야 할 것이다.</p>
+
+  <div class="tip_icon3"></div>
+
+  <div class="tipbox3">
+    <p class="txt gothic_m">숫자형, 특히 실수의 경우 예를 들어 ‘5’라고 표시되더라도 실제 CPU에서 인식하는 것은 정확한 ‘5’가 아닐 가능성이 있다. 이는 디지털 오차 때문인데, 프로그래머는 변수가 정수라는 것이 확실하지 않다면 등호(=) 보다는 비교(&#60;, &#62; 등)를 사용하는 것이 오류 발생 가능성을 줄일 수 있다. 더 자세한 내용이 궁금하다면 ‘디 지털공학’ 등의 이론 서적을 학습하면 도움이 될 것이다.</p>
+  </div>
+
+  <p class="txt indent1">두 번째로 Output은 컨트롤 박스 및 로봇의 출력 접점으로, 이 역시 아날로그 및 디지털 모두를 포함한다. &#60;그림 VII-4&#62; (c)에 현재 로봇에서 활용할 수 있는 접점이 표시된다. 위에서 설명한 입력 접점과 마찬가지로 활용할 수 있다.</p>
+
+  <p class="txt indent1">세 번째로 ‘Variable’이 있는데, 이것은 로봇에 현재 사용하고 있는 변수를 선택하여 조건을 생성할 수 있다. 이 변수는 현재 프로그램에 사용하고 있는 변수뿐만 아니라 글로벌 변수 등도 선택할 수 있다. 변수의 형태<span class="bracket">(블리언, 정수, 실수, 문자 등)</span>에 따라서 적절히 활용할 수 있다.</p>
+
+  <p class="txt indent1">네 번째로 ‘Pose’를 선택할 수 있는데, 기본으로는 Base 및 Tool 변수의 값을 비교할 수 있다. 예를 들어 현재 TCP의 위치에 어떤 범위 내부인지 아닌지 등을 조건으로 생성할 수 있다.</p>
+
+  <p class="txt indent1">마지막으로 ‘Function’이 있는데, 이는 현재 작성하고 있는 블록 코딩 형태가 아닌 텍스트 형태의 프로그램 명령어인 ‘UR script’의 명령어 기반으로 조건을 만드는 것 또한 가능하다. 각각의 명령어의 자세한 내용은 해당 로봇 제조사에서 제공하는 사용자 매뉴얼을 참조하기를 바란다.</p>
+
+  <p class="txt indent1">상술의 내용을 정리하자면, 로봇 기업마다 인터페이스의 차이는 있겠지만 If, Elseif, Else 각각에 필요한 조건을 식으로 표현하는 방법을 제공하며, 사용자는 그 방법에 따라 식을 작성하면 된다.</p>
+
+  <div class="tip_icon3"></div>
+
+  <div class="tipbox3">
+    <p class="txt gothic_m">조건을 생성할 때는 그 변수가 가질 수 있는 모든 경우가 모두 포함하도록 프로그램하여야 한다. 예를 들 어 디지털 입력의 경우 ‘참’과 ‘거짓’에 두 가지 경우 모두에 대한 동작이 정의되어야 하며, 아날로그 정수 라고 하면 10 이상과 10 미만과 같이 모든 정수에 대한 동작이 정의되어야 한다. 조건이 복잡하여 모든 경우에 대한 동작 정의가 되어 있는지가 불명확하다면 ‘Else’의 사용은 혹시나 생각지 못한 경우를 대비 하는 매우 효율적인 선택이 될 수 있다.</p>
+  </div>
+
+  <p class="txt indent1">두 가지 이상 조건을 동시에 활용하기 위해서 논리 연산자가 제공되는데, 폴리스코프에서는 &#60;그림 VII-4&#62; (a) ②에서 보이는 것과 같이 AND, OR, XOR, NOT이 있다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part07-p182-img" src="../Images/part07-p182-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part07-p183-img" src="../Images/part07-p183-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅶ-4&#62;</span> 다양한 조건 입력 방법</p>
+  </div>
+
+  <p class="imgcaption2"><span class="gothic_b dblue">&#60;표 Ⅶ-3&#62;</span> 폴리스코프의 비교 연산자</p>
+
+  <table class="table2-col2">
+    <colgroup>
+      <col/>
+
+      <col/>
+
+      <col/>
+    </colgroup>
+
+    <tbody>
+      <tr>
+        <td>
+          <p class="txt tcenter">연산자</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">기능</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">폴리스코프 버튼</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">==</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">같다</p>
+        </td>
+
+        <td>
+          <p class="icon"><img alt="part07-p183-icon1" src="../Images/part07-p183-icon1.jpg"/></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">^=</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">같지 않다</p>
+        </td>
+
+        <td>
+          <p class="icon"><img alt="part07-p183-icon2" src="../Images/part07-p183-icon2.jpg"/></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">&#62;</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">크다</p>
+        </td>
+
+        <td>
+          <p class="icon"><img alt="part07-p183-icon3" src="../Images/part07-p183-icon3.jpg"/></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">&#60;</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">작다</p>
+        </td>
+
+        <td>
+          <p class="icon"><img alt="part07-p183-icon4" src="../Images/part07-p183-icon4.jpg"/></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">&#62;=</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">크거나 같다</p>
+        </td>
+
+        <td>
+          <p class="icon"><img alt="part07-p183-icon5" src="../Images/part07-p183-icon5.jpg"/></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">&#60;=</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">작거나 같다</p>
+        </td>
+
+        <td>
+          <p class="icon"><img alt="part07-p183-icon6" src="../Images/part07-p183-icon6.jpg"/></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="txt indent1">이 단원의 이론은 짧으나, 프로그래밍에 익숙하지 않은 학생은 의외로 어려워하기도 한다. 많은 경우 ‘피상적’으로 이해하여, 실제 프로그램 구현할 때 제대로 적용하지 못하여 어려워하는 경우가 많다. 따라서 교수자의 입장에서 쉽다고 빠르게 대략적으로 설명하기보다는 단계단계 최대한 많은 예를 들어가며 긴 호흡으로 설명할 필요가 있다.</p>
+
+  <div class="txtbox number_list">
+    <p class="txt">1. If 구조문에 대한 이론적인 설명을 한다. 학습 대상자가 프로그래밍이 처음인 사람이라면 자료형에 대한 설명도 추가한다.</p>
+
+    <p class="txt">2. 상기 설명은 ‘if else’ 및 ‘else’의 내용을 반드시 포함한다.</p>
+
+    <p class="txt">3. 특히, else의 필요성을 강조한다.</p>
+
+    <p class="txt">4. 다양한 예를 들어가면서 블리언 조건에 대하여 설명한다.</p>
+
+    <p class="txt">5. 하드웨어 디지털 및 아날로그 입력을 사용하여 조건식을 만드는 방법을 설명한다.</p>
+
+    <p class="txt">6. f 내 하위 If 추가 활용 등 응용 방법을 설명한다.</p>
+  </div>
+
+  <p class="txt indent1">7장의 프로젝트는 다음에 나올 ‘서브 프로그램<span class="bracket">(SubProgram)</span>’ 및 ‘폴더<span class="bracket">(Folder)</span>’ 기능 사용 필요성과 연결된다. 수업이 마무리될 시기에 개발된 프로그램 내에 반복되는 코드<span class="bracket">(두 개의 Else 이래의 코드가 같다)</span>가 있음에 주목하도록 학생들의 주의를 환기시키자. 특히, 반복되는 코드에 오류가 있어서 수정이 필요할 때 같은 작업을 여러 번 해야 하는 번거로움을 줄일 필요가 있음을 사전에 예고해 놓는다면 다음 수업에서 학생들의 수업 집중도 향상에 도움이 될 것이다.</p>
+
+  <p class="txt gothic_b">◉실습과제 결과 예시</p>
+
+  <p class="txt gothic_b dblue2">■실습과제 1 프로젝트 개발 예시</p>
+
+  <div class="w30 img_center ">
+    <img alt="part07-p185-img" src="../Images/part07-p185-img.jpg"/>
+  </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">1 반복문</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_55"><span class="txtball dwhite">가</span> 개요</h3>
+
+  <p class="txt indent1">기본적으로 폴리스코프의 프로그램은 사용자가 아무런 설정의 변경 없이 실행하면 무한히 반복한다. 이는 폴리스코프의 프로그램 작성 시 초기 설정이 그림 1과 같이 영구적 반복이기 때문이다. 이 체크박스를 해제한다면 프로그램은 단 1회만 동작한다. 이는 일반적으로 로봇의 활용이 사람이 하는 반복 작업을 로봇이 대신해 주는 것이 목적이므로, 기본값이 무한 반복으로 설정되어있는 것이 효율적이기 때문이다. 다시 이야기하지만, 폴리스코프는 프로그래밍에 익숙하지 않은 일반적인 작업자가 사용하는 것을 가정하여 만든 개발 환경이다. 하지만 프로그램의 일부 영역에서 부분적으로 반복 동작이 필요할 경우가 발생하게 되는데, 이번 단원에서는 그 방법을 알아보고자 한다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part11-p238-img" src="../Images/part11-p238-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅺ-2&#62;</span> 로봇프로그램 초기값: 무한 반복</p>
+  </div>
+
+  <table class="table2-col2">
+    <tbody>
+      <tr>
+        <td>
+          <p class="txt tcenter">보충 학습</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt"><span class="gothic_b">시작 전 시퀀스</span></p>
+
+          <p class="txt">가끔 시작할 때 단 한 번 실행할 필요가 있는 동작이 있다. 가장 흔한 실무적인 예로 시작하기 전에 안전한 시작 위치로 이동하거나, 이번 실습과제와 같이 프로그램 시작 시 사용자의 입력을 한 번만 받는 기능 등이다. 물론 단 한 번 실행하기 위해서 &#60;그림 XI-2&#62;와 같이 영구적 반복 옵션을 해제하고, 사용자가 적절히 반복문을 사용할 수도 있다. 하지만 반복문부터는 사실상 전문가 영역의 프로그래밍으로 인식되기 때문에, 협동로봇의 목적인 모든 사람이 잘 사용할 수 있는 기능이라고 하기는 힘들다.</p>
+
+          <p class="txt">‘시작 전 시퀀스’는 이러한 문제를 해결해 준다. &#60;그림 XI-3&#62;은 사용하는 절차이다. 먼저 ①의 로봇 프로그램을 선택하면 ②에서 ‘시작 전 시퀀스’를 추가할 수 있다. 라디오 버튼을 클릭해 주자. 그러면 ③과 같이 ‘Before Start’라는 프로그램 공간이 생긴다. 이 공간에 작성된 명령어는 프로그램을 실행하면 단 한 번만 실행된다.</p>
+
+          <img alt="part11-p239-img" src="../Images/part11-p239-img.jpg"/> 
+
+          <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅺ-3&#62;</span> 시작 전 시퀀스 추가</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_56"><span class="txtball dwhite">나</span> For/While 반복문</h3>
+
+  <p class="txt indent1">우리가 흔히 사용하는 거의 모든 프로그래밍 언어에서는 반복 동작을 위한 구조문으로 For 및 While 반복문을 제공한다. 언어마다 표현 방법의 차이가 있겠지만, 기본적으로 For 반복문은 &#60;그림 XI-4&#62; (a)와 같이 반복 실행할 횟수를 입력 조건으로 입력하고, While 반복문은 &#60;그림 XI-4&#62; (b)와 같이 반복 동작이 완료될 조건을 입력한다. 이러한 차이로 인해서 일부 예외적인 활용 방법을 제외한다면 For 반복문은 확정된 횟수의 반복, While 반복문은 프로그램 내외부의 다양한 조건에 따른 미확정 횟수의 반복에 사용한다.</p>
+
+  <p class="txt indent1">예를 들어 C 프로그래밍 언어의 예를 살펴보다. For 반복문을 사용하기 위한 조건으로 ‘for(int i=0; i&#60;3; i++)’라고 작성되어 있다고 가정해 보자. ‘int i=0’ 는 초기식으로 반복 조건으로 활용할 변수 및 그 초깃값이다. 두 번째 항에 있는 ‘i&#60;3’의 경우 반복의 종료 조건으로 3보다 작은 조건에서 반복문이 실행된다는 의미이다. 세 번째 항의 i++는 반복할 때마다 해당 변수에 적용될 변화 식으로 1씩 증가함을 의미한다. 즉, 반복이 진행될 때마다 i는 0에서 1씩 증가하여 3이 되면 종료한다는 것을 의미하므로, 최종 3회의 반복 실행이 확정된다. 조금은 복잡하게 보일 수 있지만 결국은 3번 반복 실행하라는 것을 의미한다. 핵심은 이 조건은 반복문 내부에서 일어나는 동작과는 관계없이 초기 설정한 횟수인 3회만큼 반복한다는 것이다.</p>
+
+  <p class="txt indent1">반면, While 반복문의 경우 반복 횟수가 확정된 것이 아니라 프로그램 내외부의 환경에 따라서 달라지는 것이 For 반복문과의 핵심적인 차이라 할 수 있다. 예를 들어 C 프로그래밍 언어에서 while<span class="bracket">(i&#60;3)</span>이라고 작성했다고 가정하자. 이 경우 반복문 내부에서의 연산 혹은 외부 환경 등에 의해서 i&#60;3 조건이 거짓이 되면 종료가 되는데, 이 조건이 계속 참이라면 영원히 반복할 수도 있는 일이다. 흔하게 활용되는 방법으로 외부 신호<span class="bracket">(외부 스위치의 ON/OFF, 온도/습도/압력 등의 값 범위 초과)</span>에 연계하는 것이 실무적인 대표 예이다. 비단 C 기반의 언어뿐만 아니라 Python, Java, 심지어 블록 코딩 기반의 LabVIEW 등 다른 언어에서도 모두 적용되는 이야기이다.</p>
+
+  <div class="w40 img_center flex_column">
+    <img alt="part11-p240-img" src="../Images/part11-p240-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅺ-4&#62;</span> 반복 구조문</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_57"><span class="txtball dwhite">다</span> 폴리스코프의 루프</h3>
+
+  <p class="txt indent1">폴리스코프에서는 이 두 가지 반복문을 하나의 명령어에서 취급하고 있다. &#60;그림 XI-5&#62; (a)의 ‘프로그램 탭-고급-루프’가 그것이다. 클릭하면 &#60;그림 XI-5&#62; (a) ③과 같이 루프 및 하위 공간이 생긴다. 기본적인 사용법은 ③을 선택하고, 우측의 명령어 탭에서 용도에 맞춰서 반복 설정을 한 후에 수행하고자 하는 동작을 루프의 하위 공간에 작성하는 것이다. 여기서 루프의 반복 설정은 크게 세 가지가 있다.</p>
+
+  <p class="txt indent1">첫 번째의 ‘항상 Loop’의 경우 조건과 관계없이 무한 반복 수행을 하는 것이다. 종료를 위해서는 루프 내부에 별도의 종료 명령어를 추가할 수 있다.</p>
+
+  <p class="txt indent1">그 아래로 두 번째 활용법인 ‘X회 Loop’가 있는데 이것이 일반적인 For 반복문에 해당하며 아래로 ‘Loop 횟수’에 입력하는 횟수만큼 동작하게 된다. &#60;그림 XI-5&#62; (b)는 횟수를 3으로 설정했을 때 작성 프로그램의 변화를 보여준다. 이렇게 설정한다면 프로그램 내외부의 상태와 관계없이 3번 반복 동작하게 된다.</p>
+
+  <p class="txt indent1">&#60;그림 XI-5&#62; (a) ⑤에서 세 번째 활용법인 ‘표현식이 참일 때 Loop’가 있는데, 이것은 While 반복문에 해당한다. 체크박스 아래의 f(x) 버튼을 클릭하면 우리가 익히 봐오던 키보드 팝업이 뜨게 되는데, 적절한 블리언 조건을 입력하면 된다. 입력 예로 &#60;그림 XI-5&#62; (c)에는 디지털 입력 0의 입력값이 참인지 여부를 조건식으로 적용한 것이다. 이렇게 설정한다면 프로그램 외부에서 해당 입력으로 참에 해당하는 24V 입력을 주지 않는 이상 계속 반복하게 될 것이다. 즉, 반복 횟수는 전적으로 외부 입력으로 결정된다는 의미이며, 외부에서 적절한 입력<span class="bracket">(예에서는 24V)</span>이 없다면 영구반복도 가능하다.</p>
+
+  <div class="w100 img_center">
+    <img alt="part11-p242-img" src="../Images/part11-p242-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part11-p242-img2" src="../Images/part11-p242-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅺ-5&#62;</span> 폴리스코프 ‘루프’ 명령어</p>
+  </div>
+</body>
+</html>

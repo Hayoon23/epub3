@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">1 IF 구조문</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_39"><span class="txtball dwhite">가</span> IF 구조문의 이해</h3>
+
+  <p class="txt indent1">지금까지 우리는 작성한 명령어의 순서에 따라서 로봇이 반복 동작하는 프로그램을 작성해 보았다. 실제 많은 경우는 이런 단순한 동작보다는 다양한 종류의 센서 장치 등에서 나오는 아날로그 및 디지털의 조건에 따라서 선택적인 동작을 하도록 하는 경우가 더 일반적일 것이다. 이러한 조건에 따른 동작을 구현할 때 흔하게 사용되는 방법의 하나가 If 구조문이다. If 구조문은 프로그래머가 제시한 블리언<span class="bracket">(Boolean)</span> 자료형 조건, 즉 참과 거짓의 조건에 따라서 다른 동작을 수행하도록 한다. 예를 들어 문의 개폐 여부, 제품의 도착 여부, 색이 파란색인지 아닌지, 크기가 10cm 이상인지, 무게가 특정 값 이상 여부 등이 될 수 있다. &#60;표 VII-1&#62;은 다양한 블리언 조건의 예시이다. 조건이 하나였으면 &#60;그림 VII-2&#62; (a)와 같이 If/Else로 표현될 수 있다. 마름모로 표현된 ‘조건’은 앞서 이야기한 다양한 조건이 될 수 있고, 이것이 참일 때 ‘A’에 해당하는 동작을 실행한다. 반대로 거짓일 때 ‘B’에 해당하는 동작을 수행하게 되는데, 이 ‘B’에 해당하는 동작은 ‘Else’로 구분된 영역에 프로그램하게 된다. 프로그래밍 초보자의 경우 가능하면 Else를 무조건 추가하는 습관을 지니는 것을 추천한다. 이는 사용자가 생각지 못한 입력 상황에 대비하기 위함이다.</p>
+
+  <p class="imgcaption2"><span class="gothic_b dblue">&#60;표 Ⅶ-1&#62;</span> 다양한 블리언 조건 예시</p>
+
+  <table class="table2-col2">
+    <colgroup>
+      <col/>
+
+      <col/>
+    </colgroup>
+
+    <tbody>
+      <tr>
+        <td>
+          <p class="txt tcenter">변수 형태</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">구현 예시</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">숫자</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">a &#62; 10?</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">색상</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">Ball_Color = blue?</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">크기</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">Size &#60;= 10?</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">스위치</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">Switch = ON?</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">불량 여부</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">Test_Result = Good or NG(Not Good)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="txt">&#160;</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part07-p173-img" src="../Images/part07-p173-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅶ-2&#62;</span> IF 구조문</p>
+  </div>
+
+  <p class="txt indent1">단순히 참과 거짓만으로 조건이 되어 있는 일도 있겠지만, 많은 경우 조건이 여러 개가 존재한다. 예를 들어 성적이 90점 이상, 80점 이상, 70점 이상, 60점 이상 등으로 세분된 경우가 있을 수 있다. 또 다른 예로는 조도 환경에 따라서 조명의 밝기 정도를 제어하는 프로젝트를 가정하면 조도 센서에서 나온 신호를 여러 경우로 조건화할 수 있다. 이런 경우 &#60;그림 VII-2&#62; (b)에서 보이는 것과 같이 필요한 경우만큼 ‘Elseif’를 추가할 수 있다. Elseif를 추가하면 If 조건을 시작으로 상위 조건부터 차례로 비교하게 되며, 상위에서 ‘참’인 조건이 발생하면 하위의 조건은 더 이상 수행하지 않는다. 예를 들어 성적이라면 먼저 90점 이상에 A 학점을 주고, 아닌 경우 차례로 80점 이상, 70점 이상, 60점 이상 여부를 비교하는 프로그램을 구현했다고 가정하자. 이때 80점 이상의 조건에 해당한다면 그 아래의 조건인 70점 이상, 60점 이상 등은 더 이상 비교하지 않고 종료한다. 따라서 프로그램할 때는 이 순서를 잘 지키는 것이 중요하다. Elseif를 추가하여 사용할 때도 Else 조건은 가능하면 추가하여 예상치 못한 조건 밖의 상황에 대비할 수 있다. 위 성적 예의 경우 60점 미만 등이 그에 해당한다.</p>
+
+  <p class="txt indent1">특정 조건 내에 새로운 조건을 추가하는 것도 가능하다. 예를 들어 두 개의 스위치를 사용하는 상황이라면, 스위치1이 High일 경우에만 다른 스위치 2의 조건에 따른 다른 동작을 하는 등의 프로그램 구현은 이러한 경우에 속한다.</p>
+
+  <p class="txt">&#160;</p>
+
+  <table class="table2-col2">
+    <tbody>
+      <tr>
+        <td>
+          <p class="txt tcenter">보충 학습</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt"><span class="gothic_b">자료형</span></p>
+
+          <p class="txt gothic_m">프로그램은 다양한 정보의 처리하여 원하는 결과를 얻기 위한 목적이다. 그 과정에서 여러 가지 정보는 메모리에 저장되어 연산해야 하는데, 그 연산은 더하기, 빼기 등 산술 연산 이외에 문자의 조합, AND/OR 등으로 대표되는 논리 연산 등이 포함된다. 이것을 더 자세히 살펴보면 더하기는 숫자만 가능하고, 문자의 조합은 문자만 가능하다는 특징이 있다. 즉, 이러한 연산 과정에서 중요한 요소 한 가지는 해당 연산에 적합한 대상 정보의 형태(숫자, 문자, 논리값 등)를 잘 살펴보아야 한다는 것이다. 이를 위해서 많은 프로그래밍 서적에서 처음 학습하는 내용 중 하나가 자료형이다. 이 책은 프로그래밍 자체가 목적이 아니므로 간략히만 살펴보도록 하겠다.</p>
+
+          <p class="txt gothic_m">&#60;표 VII-2&#62;의 일반적인 자료형의 구분이다. 크게는 논리형, 문자형, 숫자형으로 나눌 수 있고, 숫자형은 다시 정수형과 실수형으로 구분한다. 논리형은 AND, OR 등의 논리 연산에 활용할 수 있고, 숫자형은 더하기, 빼기 등 산술 연산에 사용한다. 문자형은 문자열을 자르고, 없애는 등의 특별한 연산 함수를 프로그램 개발 도구에서 제공한다.</p>
+
+          <p class="txt gothic_m">초보 프로그래머들이 가장 흔한 실수 가운데 하나는 이것에 대한 개념이 부족해서 발생한다. 예를 들어 ‘1’이라는 것은 사람이 보기에는 숫자로 보일 수 있지만, 컴퓨터 입장에서는 그것이 문자인지 숫자인지 프로그래머가 ‘정의’해 주지 않으면 알 수가 없다. 먼저 이야기한 것처럼 더하기는 숫자의 연산에 사용하는 연산자이므로, 이 ‘1’이 문자로 정의되어 있다면 더하기라는 연산이 불가능하게 되고 오류가 발생하게 된다.</p>
+
+          <p class="txt gothic_m">로봇프로그램도 기본적으로 프로그래밍의 하나이기 때문에 이러한 기본 원칙들이 그대로 적용된다. 따라서, 깊이 있는 학습을 위해서는 프로그래밍을 위한 기초 소양 역시 필요하다.</p>
+
+          <p class="imgcaption2"><span class="gothic_b dblue">&#60;표 Ⅶ-2&#62;</span> 다양한 자료형</p>
+
+          <table class="table2-col2">
+            <colgroup>
+              <col/>
+
+              <col/>
+
+              <col/>
+
+              <col/>
+            </colgroup>
+
+            <tbody>
+              <tr>
+                      <td class="w15">
+                  <p class="txt tcenter">자료형</p>
+                </td>
+
+                        <td class="w15">
+                  <p class="txt tcenter">키워드</p>
+                </td>
+
+                <td class="w15">
+                  <p class="txt tcenter">Size</p>
+                </td>
+
+                <td>
+                  <p class="txt tcenter">정보 범위</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p class="txt tcenter">논리형</p>
+                </td>
+
+                <td>
+                  <p class="txt tcenter">Boolean</p>
+                </td>
+
+                <td>
+                  <p class="txt tcenter">1 bit</p>
+                </td>
+
+                <td>
+                  <p class="txt">참/거짓</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p class="txt tcenter">문자형</p>
+                </td>
+
+                <td>
+                  <p class="txt tcenter">Char</p>
+                </td>
+
+                <td>
+                  <p class="txt tcenter">2 bytes</p>
+                </td>
+
+                <td>
+                  <p class="txt">분산 시스템의 로그 수집 및 모니터링</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p class="txt tcenter">정수형</p>
+                </td>
+
+                <td>
+                  <p class="txt tcenter">Int, long</p>
+                </td>
+
+                <td>
+                  <p class="txt tcenter">1~8bytes</p>
+                </td>
+
+                <td>
+                  <p class="txt">분산 시스템 로그 수집 서버</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p class="txt tcenter">실수형</p>
+                </td>
+
+                <td>
+                  <p class="txt tcenter">float, double</p>
+                </td>
+
+                <td>
+                  <p class="txt tcenter">4~8bytes</p>
+                </td>
+
+                <td>
+                  <p class="txt">관계형 데이터베이스 관리 시스템과 NoSQL 간의 데이터 연동</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_40"><span class="txtball dwhite">나</span> 블리언 조건 구현</h3>
+
+  <p class="th4">1) 비교 연산</p>
+
+  <p class="txt indent1">조건문에 블리언 조건을 활용하기 위해서, 그리고 나중에 반복문의 조건을 만들기 위해서 비교 연산자에 대해서 기본적인 이해가 필요하다. 비교 연산자는 두 개의 피연산자를 비교하여 참 또는 거짓의 값을 반환하는 연산자이다. 대표적인 연산자는 &#60;표 VII-2&#62;와 같이 6가지 정도가 있다. 하나씩 그 특징을 살펴보자.</p>
+
+  <p class="txt number_list ml3">① 동등 연산자 <span class="bracket">(==)</span></p>
+
+  <p class="txt indent1">일반적으로 ‘==’로 표현되는 동등 연산자는 두 피연산자의 값이 같으면 참, 다르면 거짓을 반환한다. 예를 들어, ‘3 == 3’은 참이고, ‘3 == 4’는 거짓이다. 이 동등 연산자는 숫자뿐만 아니라 문자열에도 활용할 수 있는데, 예를 들어 ‘apple == banana’라고 하면 거짓 조건이다. 동등 연산자의 실무 활용에서 숫자를 비교할 때는 주의해야 하는 점이 있다. 실수의 경우 화면에 표시되는 값과 실제 컴퓨터 내부의 값이 다를 수 있다. 예를 들어 우리가 화면에서 1이라고 숫자가 표시되더라도, 이 숫자가 실제는 1에 근접한 1.00...01이라는 숫자일 수 있다는 것이다. 이 경우 ‘1 == 1’이 거짓 결과를 반환하기도 한다. 실무에서 흔히 발생하는 문제로 주의하여야 한다. 애매하다고 생각되는 경우 크다 혹은 작다 연산자를 사용하는 것을 권유한다.</p>
+
+  <p class="txt number_list ml3">② 부등 연산자 <span class="bracket">(!=)</span></p>
+
+  <p class="txt indent1">일반적으로 ‘!=’로 표현되는 부등 연산자는 두 피연산자의 값이 다르면 참, 같으면 거짓을 반환한다. 예를 들어, 3 != 3은 거짓이고, 3 != 4는 참이다. 동등 연산자와 마찬가지로 문자열에도 활용할 수 있는데, 예를 들어 ‘apple != banana’라고 하면 참 조건이다.</p>
+
+  <p class="txt number_list ml3">③ 크다 연산자 <span class="bracket">(&#62;)</span></p>
+
+  <p class="txt indent1">일반적으로 ‘&#62;’로 표현되는 크다 연산자는 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크면 참, 작거나 같으면 거짓을 반환한다. 예를 들어, 3 &#62; 2는 참이고, 3 &#62; 3은 거짓이다. 크다, 작다 연산자도 문자열에 적용할 수 있는데, ‘사전 순서’대로 비교하여 결과를 반환한다. 예를 들어 ‘apple’과 ‘banana’의 사전 순서를 비교해보자. ‘banana’의 ‘b’가 ‘apple’의 ‘a’보다 더 뒤에 위치하므로, ‘apple’은 ‘banana’보다 작다. 따라서 ‘apple &#62; banana’는 거짓이다.</p>
+
+  <p class="txt number_list ml3">④ 작다 연산자 <span class="bracket">(&#60;)</span></p>
+
+  <p class="txt indent1">일반적으로 ‘&#60;’로 표현되는 작다 연산자는 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 작으면 참, 크거나 같으면 거짓을 반환한다. 예를 들어, 3 &#60; 2는 거짓이고, 3 &#60; 4는 참이다. 문자열은 크다 연산자와 반대이므로 한 번 생각해 보기를 바란다.</p>
+
+  <p class="txt number_list ml3">⑤ 크거나 같다 연산자 <span class="bracket">(&#62;=)</span></p>
+
+  <p class="txt indent1">일반적으로 ‘&#62;=’로 표현되는 크거나 같다 연산자는 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크거나 같으면 참, 작으면 거짓을 반환한다. 예를 들어, 3 &#62;= 2는 참이고, 3 &#62;= 4는 거짓이다.</p>
+
+  <p class="txt number_list ml3">⑥ 작거나 같다 연산자 <span class="bracket">(&#60;=)</span></p>
+
+  <p class="txt indent1">일반적으로 ‘&#60;=’로 표현되는 동등 연산자는 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 작거나 같으면 참, 크면 거짓을 반환한다. 예를 들어, 3 &#60;= 2는 거짓이고, 3 &#60;= 3은 참이다.</p>
+
+  <p class="imgcaption2"><span class="gothic_b dblue">&#60;표 Ⅶ-2&#62;</span> 비교 연산자</p>
+
+  <table class="table2-col2">
+    <colgroup>
+      <col/>
+
+      <col/>
+
+      <col/>
+    </colgroup>
+
+    <tbody>
+      <tr>
+        <td>
+          <p class="txt tcenter">연산자</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">기능</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">예시 (결과)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">==</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">같다</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">7 == 8 (False)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">^=</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">같지 않다</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">7 ^= 8 (True)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">&#62;</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">크다</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">7 &#62; 8 (False)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">&#60;</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">작다</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">7 &#60; 8 (True)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">&#62;=</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">크거나 같다</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">7 &#62;= 8 (False)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">&#60;=</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">작거나 같다</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">7 &#60;= 8 (True)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="th4">2) 논리 연산</p>
+
+  <p class="txt indent1">조건문을 만드는 과정에서 두 가지 이상의 조건에 관한 결과를 함께 활용하는 경우가 종종 있다. 이 경우 논리 연산에 대한 이해가 필요하다. 논리 연산이란 참과 거짓을 판단하는 연산으로, 조건문이나 반복문 등에서 자주 사용된다. 예를 들어, ‘문이 열린 상태’와 ‘외부인이 출입이 감지 여부’가 모두 참이면 ‘경고 알람’을 실행하라는 명령을 수행하기 위해서는 논리 연산자 AND를 사용할 수 있다. AND 이외에도 &#60;표 VII-3&#62;에서와 같이 다양한 논리 연산자가 있다. 이것들을 잘 이해하는 것이 다양한 환경 조건에서 적합한 로봇 동작 구현에 매우 중요하다.</p>
+
+  <p class="txt">&#160;</p>
+
+  <p class="txt number_list ml3">① 논리곱 <span class="bracket">(AND)</span></p>
+
+  <p class="txt indent1">논리 연산자 AND는 두 개의 명제가 모두 참일 때만 참이 되는 연산자이다. 예를 들어, “문이 열려있고, 외부인의 출입이 있다”라는 명제는 문이 열려있는 것과 외부인의 출입이 있는 것이 모두 사실일 때만 참이 된다. 수리 논리학에서 ∩ 기호로 표현하며, 프로그래밍 언어에서는 &#38;나 &#38;&#38;로 표현한다.</p>
+
+  <p class="txt number_list ml3">② 논리합 <span class="bracket">(OR)</span></p>
+
+  <p class="txt indent1">논리 연산자 OR는 두 개의 명제 중 하나라도 참이라면 참이 되는 연산자이다. 예를 들어, “문이 열려있거나, 외부인의 출입이 있다”라는 명제는 문이 열려있는 것과 외부인의 출입이 있는 것 중 하나라도 참이라면 참이 된다. 수리 논리학에서 ∪기호로 표현하며, 프로그래밍 언어에서는 ||로 표현한다.</p>
+
+  <p class="txt number_list ml3">③ 부정 <span class="bracket">(NOT)</span></p>
+
+  <p class="txt indent1">논리 연산자 NOT는 주어진 명제에 대해서 반대의 값을 반환하는 연산자이다. 예를 들어, “문이 열려있다”라는 명제가 참이라면, 이 조건의 부정 연산의 결과는 거짓이 된다. 프로그래밍 언어에서는 !로 표현하며, 조건문이나 반복문에서 특정 조건을 제외하거나 부정하고 싶을 때 유용하게 사용할 수 있다.</p>
+
+  <p class="txt number_list ml3">④ 부정 논리곱 <span class="bracket">(NAND)</span></p>
+
+  <p class="txt indent1">부정 논리곱 NAND는 AND의 앞에 NOT을 의미하는 N이 추가되었다고 이해하면 편리하다. 따라서 연산 결과는 AND 결과의 반대이다. 예를 들어, “문이 열려있고, 외부인의 출입이 있다”라는 명제의 NAND 결과는 문이 열려있는 것과 외부인의 출입이 있는 것 모두 참이므로 결과는 거짓이 되며, 나머지 경우는 모두 참이다.</p>
+
+  <p class="txt number_list ml3">⑤ 부정 논리합 <span class="bracket">(NOR)</span></p>
+
+  <p class="txt indent1">부정 논리합 NOR는 OR의 앞에 NOT을 의미하는 N이 추가되었다고 이해하면 편리하다. 따라서 연산 결과는 OR 결과의 반대이다. 예를 들어, “문이 열려있거나, 외부인의 출입이 있다”라는 명제는 문이 열려있는 것과 외부인의 출입이 있는 것 가운데 하나라도 참이라면 NOR의 결과는 거짓이 된다. 즉, 둘 다 거짓인 경우만 참이 된다.</p>
+
+  <p class="txt number_list ml3">⑥ 배타적 논리합 <span class="bracket">(XOR)</span></p>
+
+  <p class="txt indent1">배타적 논리합 XOR은 두 피연산자가 서로 다른 값을 가질 때만 참을 반환하는 논리 연산자이다. 예를 들어, “문이 열려있지만, 외부인의 출입은 없다”라는 명제는 문이 열려있는 것과 외부인의 출입이 없는 중 하나만 참이므로 참이 된다.</p>
+
+  <p class="imgcaption2"><span class="gothic_b dblue">&#60;표 Ⅶ-3&#62;</span> 논리 연산자</p>
+
+  <table class="table2-col2">
+    <colgroup>
+      <col/>
+
+      <col/>
+
+      <col/>
+
+      <col/>
+    </colgroup>
+
+    <tbody>
+      <tr>
+        <td>
+          <p class="txt tcenter">연산자</p>
+        </td>
+
+        <td colspan="2">
+          <p class="txt tcenter">연산</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">예시 (결과)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="5">
+          <p class="txt tcenter">AND</p>
+
+          <p class="txt tcenter">(논리곱)</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">입력값</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">반환값</p>
+        </td>
+
+        <td rowspan="5">
+          <p class="txt tcenter">1 AND 1 (True)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="5">
+          <p class="txt tcenter">OR</p>
+
+          <p class="txt tcenter">(논리합)</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">입력값</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">반환값</p>
+        </td>
+
+        <td rowspan="5">
+          <p class="txt tcenter">1 OR 1 (True)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="3">
+          <p class="txt tcenter">NOT</p>
+
+          <p class="txt tcenter">(부정)</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">입력값</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">반환값</p>
+        </td>
+
+        <td rowspan="3">
+          <p class="txt tcenter">NOT 1 (False)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="5">
+          <p class="txt tcenter">NAND</p>
+
+          <p class="txt tcenter">(부정 논리곱)</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">입력값</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">반환값</p>
+        </td>
+
+        <td rowspan="5">
+          <p class="txt tcenter">1 NAND 1 (False)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="5">
+          <p class="txt tcenter">NOR</p>
+
+          <p class="txt tcenter">(부정 논리합)</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">입력값</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">반환값</p>
+        </td>
+
+        <td rowspan="5">
+          <p class="txt tcenter">1 NOR 1 (False)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="5">
+          <p class="txt tcenter">XOR</p>
+
+          <p class="txt tcenter">(배타적 논리합)</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">입력값</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">반환값</p>
+        </td>
+
+        <td rowspan="5">
+          <p class="txt tcenter">1 XOR 1 (False)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">0 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 0</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">1 , 1</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

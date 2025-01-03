@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">2 로봇 처음 사용하기</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_4"><span class="txtball dwhite">가</span> 로봇 시동하기</h3>
+
+  <div class="tip_icon1"></div>
+
+  <div class="tipbox1">
+    <p class="txt gothic_m">로봇 시동에 앞서서 로봇 주위의 위험 요소 및 올바르게 전원이 공급되고 있는 상태인지를 먼저 확인할 필 요가 있다. 또한 작업자의 복장 및 자세의 안전성도 확인해야 한다. 구체적인 안전 사항에 대해서는 5장에 서 설명하도록 한다. 앞으로의 설명은 로봇이 올바르게 설치되어 있다는 것을 가정하여 설명한다는 점을 분 명히 한다.</p>
+  </div>
+
+  <p class="txt indent1">로봇의 시동의 크게 컨트롤 박스 부팅 및 로봇 시동의 2단계로 이루어진다. 티치 팬던트의 전원 버튼을 누르면 내부 팬이 돌아가는 소리와 함께 컨트롤 박스에 전원이 공급된다. 이후 &#60;그림 I-12&#62; (a)와 같이 로딩 화면이 뜨고 1분 내외의 시간이 흐르면 부팅이 완료된다. 부팅이 완료되면 &#60;그림 I-12&#62; (b)와 같은 초기 화면이 나타나는데, 이 화면은 설정에 따라 조금씩 다를 수 있다. 이 동작은 실제 컴퓨터에서 전원 버튼을 눌렀을 때와 크게 다르지 않다.이 상태에서 로봇은 움직이지 않는데, 아직 로봇의 모터 전원은 공급되지 않는 상태이기 때문이다. 이 점은 우리가 사용하는 컴퓨터와는 다르다. 모니터의 경우 미리 켜 둔다고 해도 사용자에게 위험이 되는 상황이 발생하지 않지만, 제어 신호가 안정적이지 않은 로봇암의 경우는 사용자에게 위험할 수 있다. 따라서, 제어기에 해당하는 컨트롤 박스의 부팅을 완료하여 제어 신호를 안정시킨 후 로봇을 켜서 위험 요소를 줄일 수 있다.</p>
+
+  <div class="w100 img_center ">
+    <img alt="part01-p033-img1" src="../Images/part01-p033-img1.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part01-p033-img2" src="../Images/part01-p033-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅰ-12&#62; </span><span class="본문_본문_표_머릿말--이미지-캡션 CharOverride-4">로봇 켜기</span></p>
+  </div>
+
+  <p class="txt indent1">로봇을 켜 보도록 하자. 그림 1-13 (a)의 ①로 표시된 빨간색 버튼을 누르면 로봇 시동을 위한 팝업이 나타난다. <span class="bracket">(초기 설정에 따라서 팝업이 바로 보일 수 있다)</span></p>
+
+  <div class="tip_icon1"></div>
+
+  <div class="tipbox1">
+    <p class="txt gothic_m">로봇에 전원을 넣는 단계인 ‘켜짐’ 버튼을 누르기 전에 반드시 ② 영역의 ‘페이로드’ 설정을 확인해야 한다 . ‘페이로드’는 현재 로봇에 부착되어 있는 툴 및 작업물 등의 총 무게를 의미한다. 더 자세한 내용은 차후에 자 세히 이야기하도록 하겠다.</p>
+  </div>
+
+  <p class="txt indent1">&#60;그림 I-13&#62; (b)는 로봇의 전원 입력 순서이다. 먼저 ②의 페이로드<span class="bracket">(PayLoad)</span>를 확인한다. 페이로드는 현재 로봇에 장착되어 있는 툴의 무게 정도라고 생각하자. 더 자세한 내용은 다른 단원에서 설명하도록 하겠다. 페이로드가 확인되면 켜짐 버튼을 누른다. 로봇에 전원이 공급되기 시작한다. 잠시 기다리면 중간의 ‘로봇 활성’ 단계까지 진행이 되고, 다시 사용자가 ‘시작’을 누르기를 기다린다. ‘시작’ 버튼을 누르면 로봇에서 ‘두두두’ 소리와 함께 전체 5개의 LED가 전부 녹색으로 변한다. 여기서 ‘두두두’ 소리는 사용 활성화를 위해서 각 조인트의 서보 모터에 있는 브레이크가 해제되는 소리이다. 릴레이 방식으로 구동되는 이 브레이크는 해제를 위한 특별한 전압 인가 없이는 기본적으로 고정된 상태로 유지된다. 이것은 로봇 동작 도중 갑작스러운 정전 등의 상황에서 로봇 및 주변을 보호할 수 있다.</p>
+
+  <div class="w100 img_center">
+    <img alt="part01-p034-img" src="../Images/part01-p034-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part01-p035-img" src="../Images/part01-p035-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅰ-13&#62;</span> 로봇 시동</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_5"><span class="txtball dwhite">나 </span> 프리드라이브</h3>
+
+  <p class="txt indent1">프리드라이브<span class="bracket">(Free Drive)</span>를 활용하여 로봇의 자세를 바꿔보자. 프리드라이브 버튼은 &#60;그림 I-6&#62; (a)에서와 같이 티치 팬던트의 뒤쪽 상단에 있고, 티치 팬던트를 잡았을 때 쉽게 손가락으로 누를 수 있는 위치에 있다. 버튼을 누르면 외부의 힘이 가해지지 않았을 때는 움직이지 않는 것이 정상이며 혹시 상하 방향으로 움직인다면 ‘페이로드’ 설정에 정확하지 않은 것으로 변경이 필요하다. 변경하는 방법은 다른 단원에서 다시 설명하겠다. 버튼을 누른 상태에서 &#60;그림 I-14&#62;에서와 같이 손으로 로봇의 ‘손목’ 부위를 잡고 움직이면 쉽게 움직여진다. 손가락 하나로도 가볍게 움직여질 정도로 자연스럽게 움직여지지 않는다면 문제가 있을 가능성이 있으므로 전문가에서 확인하자.</p>
+
+  <div class="tip_icon1"></div>
+
+  <div class="tipbox1">
+    <p class="txt gothic_m">프리드라이브 제어 시 로봇을 잡는 위치를 주의해야 한다. 손목3의 위치에 ‘Tool I/O’ 커넥터가 부착되어 있 는데 부주의로 인한 파손이 일어날 수 있으므로 조심하도록 하자. 또한, 부착된 툴도 종류에 따라 고장 및 파 손의 위험이 있을 수 있으므로 툴을 잡고 움직이는 것도 지양해야 한다.</p>
+  </div>
+
+ <div class="w100 img_center flex_column">  <img alt="part01-p036-img" src="../Images/part01-p036-img.jpg"/>
+
+  <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅰ-14&#62;</span> 프리드라이브 이동</p></div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_6"><span class="txtball dwhite">다 </span> 로봇의 종료</h3>
+
+  <p class="txt indent1">로봇 사용이 마무리되면 정리를 해야 한다. 로봇의 초기 위치로 이동하기 위해서는 폴리스코프 헤더의 ‘이동’ 탭을 선택한다. &#60;그림 I-15&#62;의 ①의 ‘홈’이라는 버튼을 누르면 로봇의 초기 위치로 이동할 수 있다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part01-p037-img" src="../Images/part01-p037-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅰ-15&#62;</span>홈 상태로 이동</p>
+  </div>
+
+  <p class="txt indent1">종료하기 전에 로봇과 로봇 주변에 특별한 이상은 없는지 및 작업물의 저장 상태 등을 확인하자. 티치 팬던트의 전원 버튼을 누르면 &#60;그림 I-16&#62;과 같이 종료 확인 팝업이 뜨는데, 안내에 따라서 필요한 저장을 하고 종료할 수 있다. 특히, 이때 설치 정보 변경이 있을 수 있는데, 이 부분은 저장이 필요한지를 한 번 더 확인할 필요가 있다. 설치 정보를 잘못 저장할 때 그 설치 정보를 사용하는 다른 프로그램에 영향을 미칠 수 있기 때문이다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part01-p038-img" src="../Images/part01-p038-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅰ-16&#62;</span> 로봇 종료</p>
+  </div>
+
+  <div class="txtbox number_list">
+    <p class="txt">1. 로봇 하드웨어 구성 및 구조에 대해서 설명한다.</p>
+
+    <p class="txt">2. 폴리스코프의 ‘대략’적인 화면 구성을 설명한다. (첫 강의에 너무 많은 설명은 학생들의 주의를 떨어트리 므로 주의하자)</p>
+
+    <p class="txt">3. 이동 명령어(MoveJ, MoveL, MoveP)에 대해서 자세히 설명한다.</p>
+
+    <p class="txt">4. ‘프로그램’ 탭에 대해서 자세히 설명한다.</p>
+
+    <p class="txt">5. 프리드리이브 사용에 대해서 설명하고, 특히 사용시 주의사항을 강하게 주시시킨다.</p>
+
+    <p class="txt">6. 학생들과 함께 로봇 시동 및 종료를 천천히 연습한다.</p>
+  </div>
+
+  <p class="txt gothic_b">◉ 실습과제 결과 예시</p>
+
+  <p class="txt gothic_b dblue2">■ 실습과제2 구현 예시</p>
+
+  <div class="w30 img_center ">
+    <img alt="part01-p039-img" src="../Images/part01-p039-img.jpg"/>
+  </div>
+</body>
+</html>

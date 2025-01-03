@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="assignment">
+    <p class="as_num">01</p>
+
+    <h3>실습과제<br/> <span class="as_title">조건 동작 구현</span></h3>
+  </div>
+
+  <p class="txt gothic_b bgo pl1 dwhite">학습 목표</p>
+
+  <div class="box2">
+    <p class="txt gothic_m number_list ml1"><span class="color1">1.</span> IF 구조문을 이해하고 설명할 수 있다.</p>
+
+    <p class="txt gothic_m number_list ml1"><span class="color1">2.</span> 다양한 상황을 블리언 조건으로 표현할 수 있다.</p>
+
+    <p class="txt gothic_m number_list ml1"><span class="color1">3.</span> 순서 동작 사이에 조건문을 적절히 활용하여 로봇프로그램을 구현 할 수 있다.</p>
+  </div>
+
+  <p class="th1"><img alt="icon4" src="../Images/icon4.png"/> 1. 부품 및 장비</p>
+
+  <div class="img_center">
+    <img alt="part07-p166-table" src="../Images/part07-p166-table.jpg"/>
+  </div>
+
+  <p class="th1"><img alt="icon5" src="../Images/icon5.png"/> 2. 구현 동작 목표</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part07-p167-img" src="../Images/part07-p167-img.jpg"/>
+  </div>
+
+  <div class="img_center flex_column">
+    <img class="w40 mcenter" alt="part07-p167-img2" src="../Images/part07-p167-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅶ-1&#62;</span> 조건 동작 구현</p>
+  </div>
+
+  <p class="goal">학습 목표</p>
+
+  <p class="txt ml15">스위치의 상태에 따라서 맨눈 검사 진행 여부 및 검사 결과에 따라 동작을 다르게 하는 동작을 구현한다.</p>
+
+  <p class="goal">동작 설명</p>
+
+  <p class="txt gothic_m number_list ml3">&#60;그림 VII-1&#62; 참조</p>
+
+  <p class="txt gothic_m number_list ml3">① 스위치 1(SW1)은 맨눈 검사 여부를, 스위치 2(SW2)는 불량 여부 정보를 사용자가 직접 로봇에게 제공한다.</p>
+
+  <div class="tip_icon"></div>
+
+  <div class="tipbox">
+    <p class="txt gothic_m">실제 산업 현장에서는 사람이 직접 스위치 동작을 통해 제어하기보다는 다양한 센서와 그 센서의 정보를 이 용한 알고리즘 처리를 통하여 자동화되어 처리될 것이다. 하지만, 자동화 처리된 결정에 따른 동작은 이번 프로젝트와 마찬가지로 프로그래머의 몫이다.</p>
+  </div>
+
+  <p class="txt gothic_m number_list ml3">② (SW1, SW2는 Low 상태; 기본 동작) 로봇은 기본적으로 컨베이어벨트 우측 센서 위치에서 블록을 집고, 컨베이어벨트 좌측으로 블록을 옮겨 놓는 동작을 반복한다. 이 동작은 3장 및 4장에서 작성하였던 프로그램과 같다.</p>
+
+  <p class="txt gothic_m number_list ml3">③ 블록을 든 상태에서 맨눈 검사를 할지를 SW1을 통하여 결정한다. SW1이 High이면 맨눈 검사 위치로, Low이면 다시 블록을 기본 동작인 컨베이어벨트 좌측으로 이동시킨다. 맨눈 검사는 블록을 검사자 눈앞으로 먼저 이동시켜 회전함으로써 편하게 관찰할 수 있도록 한다. 회전이 끝나면 2~5초 사이의 대기시간이 주고, 검사자는 SW2를 이용하여 불량 여부에 대한 정보를 로봇에게 제공한다.</p>
+
+  <p class="txt gothic_m number_list ml3">④ 불량이 아닌 경우 사진과 같이 기본 동작인 컨베이어벨트 좌측 위치에 이동시킨다.</p>
+
+  <p class="txt gothic_m number_list ml3">⑤ 불량일 때는 사진과 같이 사용자가 지정한 위치에 버리는 동작을 구현한다.</p>
+
+  <div class="tip_icon3"></div>
+
+  <div class="tipbox3">
+    <p class="txt gothic_m">(잘못된 프로그램 예)</p>
+
+    <p class="txt gothic_m number_list ml2">1. SW1 Low, SW2 High 상태에서 맨눈 검사를 하지 않고, 불량 결과만으로 블록을 폐기하도록 프로그램하 는 경우가 많다. 현장에서는 그 결과는 기존 제품 검사의 결과 등으로 유효하지 않은 값일 수 있다. 반드시 맨눈 검사 이후에 불량 판정 정보를 사용자가 입력하고, 그 정보에 따라서 로봇의 동작이 결정되어야 한다.</p>
+
+    <p class="txt gothic_m number_list ml2">2. 불필요한 동작을 반복하는 상황 발생하는 경우가 많다. IF를 사용하여 동작을 구분하는 과정에서 적절하 지 못하게 프로그램한 결과이다.</p>
+
+    <p class="txt gothic_m number_list ml2">3. 맨눈 검사가 시작된 이후 입력된 불량 검사 결과 변경이 불가능하도록 프로그램된 경우가 있다. 즉, 맨눈 검사 시작할 때의 SW2의 상태 값이 최종 폐기 동작 진행 여부가 결정되는 프로그램이다. 이 프로젝트에 서 요구하는 결과가 아니다.</p>
+  </div>
+
+  <p class="th1"><img alt="icon6" src="../Images/icon6.png"/> 3. 실습 평가</p>
+
+  <div class="img_center">
+    <img alt="part07-p169-table" src="../Images/part07-p169-table.jpg"/>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="assignment">
+    <p class="as_num">01</p>
+
+    <h3>실습과제</h3>
+
+    <p class="as_title">스레드를 적용한<br/> 픽앤플레이스</p>
+  </div>
+
+  <p class="txt gothic_b bgo pl1 dwhite">학습 목표</p>
+
+  <div class="box2">
+    <p class="txt gothic_m number_list ml1"><span class="color1">1.</span> 스레드의 필요성을 이해하고 활용할 수 있다.</p>
+
+    <p class="txt gothic_m number_list ml1"><span class="color1">2.</span> 반지름 혼합 및 이동 속도를 변경하여 동작을 효율화할 수 있다.</p>
+
+    <p class="txt gothic_m number_list ml1"><span class="color1">3.</span> 타이머를 활용하여 최적화 정도를 확인하고 개선할 수 있다.</p>
+
+    <p class="txt gothic_m number_list ml1"><span class="color1">4.</span> 세 가지 이동 명령어(MoveJ, MoveL, MoveP)의 차이를 설명할 수 있다.</p>
+  </div>
+
+  <p class="th1"><img alt="icon4" src="../Images/icon4.png"/> 1. 부품 및 장비</p>
+
+  <div class="img_center">
+    <img alt="part03-p086-table" src="../Images/part03-p086-table.jpg"/>
+  </div>
+
+  <p class="th1"><img alt="icon5" src="../Images/icon5.png"/> 2. 구현 동작 목표</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part04-p087-img1" src="../Images/part04-p087-img1.jpg"/>
+  </div>
+
+  <div class="img_center flex_column">
+    <img class="w30 mcenter" alt="part04-p087-img2" src="../Images/part04-p087-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅳ-1&#62;</span> 스레드를 적용한 픽앤플레이스</p>
+  </div>
+
+  <p class="goal">학습 목표</p>
+
+  <p class="txt ml15">여러 개의 블록이 적체되거나 로봇이 블록의 이동을 기다리는 등의 비효율적인 동작이 일어나지 않도록 스레드를 적절히 활용하는 방법을 학습한다.</p>
+
+  <p class="goal">동작 설명</p>
+
+  <p class="txt ml15">기본적인 로봇 동작은 3장의 프로젝트와 같다.</p>
+
+  <p class="txt gothic_m number_list ml3">① 컨베이어가 동작함에 따라 집는 위치(근접 센서 위치)에 블록이 들어온다. 그리퍼는 블록이 도착할 때까지 블록을 잡을 위치의 상단에서 대기한다.</p>
+
+  <p class="txt gothic_m number_list ml3">② 블록이 도착함에 따라서 컨베이어의 동작이 멈추고, 그리퍼는 블록을 집는다.</p>
+
+  <p class="txt gothic_m number_list ml3">③ 블록을 들어서 올린다. 이때 컨베이어는 대기 중인 블록을 잡는 위치로 이동시킨다. (집는 위치에서 블록이 제거되면, 컨베이어는 블록을 이동시키고 도착하면 즉시 정지한다. 이 동작은 로봇의 움직임과 별개로 동작해야 한다.)</p>
+
+  <p class="txt gothic_m number_list ml3">④ 로봇은 블록을 정해진 위치에 놓고 다시 대기 위치로 이동한다.</p>
+
+  <p class="th1"><img alt="icon6" src="../Images/icon6.png"/> 3. 실습 평가</p>
+
+  <div class="img_center">
+    <img alt="part04-p088-table" src="../Images/part04-p088-table.jpg"/>
+  </div>
+</body>
+</html>

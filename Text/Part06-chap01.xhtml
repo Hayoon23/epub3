@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">1 페이로드 설정</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_33"><span class="txtball dwhite">가</span> 페이로드 개요</h3>
+
+  <p class="txt indent1">페이로드<span class="bracket">(Payload)</span>는 해당 로봇이 취급할 수 있는 작업물의 무게 정보를 의미하며 우리말로는 ‘가반하중’이라고도 한다. 이 페이로드는 로봇의 구조와 사용하는 모터의 성능에 따라서 달라지며, 이 정보는 제품 정보를 통해서 확인할 수 있다.</p>
+
+  <p class="txt indent1">&#60;표 VI-1&#62;은 유니버설로봇社의 협동로봇 제품의 성능 표시 예이다. UR3, UR5, UR10은 각각 3kg, 5kg, 10kg의 페이로드 성능을 가지고 있음을 알 수 있다. 툴 설정에 있어서 이 페이로드는 먼저 설명한 ‘취급할 수 있는 작업물의 무게’라는 정의와 조금 다르게 사용되고 있는데, 이는 현재 로봇에 붙어있는 툴과 작업물이 있다면 그것들의 전체 무게 정보이다. 또한 무게의 중심 정보도 포함한다. 이것이 필요한 이유는 다음과 같다. 해당 로봇의 제작사는 그 로봇에 대한 모든 기구학적 정보를 가지고 있다. 따라서 로봇을 정밀하게 제어하는 데 필요한 각 조인트 모터의 제어 조건을 알고 있지만, 사용자가 필요에 따라서 추가하여 부착하는 툴의 정보는 알 수 없다. 무게가 있는 툴이 장착되는 순간 앞에서 로봇 자체만을 위한 제어 조건은 더 이상 맞지 않게 된다. 즉, 로봇의 정밀한 제어를 위해서 각 조인트에 적용되는 전류 등 제어 조건 값들이 변경되어야 한다. 이것은 사람의 팔을 예로 생각하면 쉬운데, 우리가 아무것도 들고 있지 않은 상태와 1.5리터의 물통을 손에 들고 위아래로 움직일 때 근육에 주어지는 힘을 생각해 보자. 완전히 다른 힘이 필요하다. 사람은 다양한 감각을 이용하여 그 상황에 필요한 힘을 줄 수 있지만, 로봇은 스스로 이 과정을 처리하기 어렵다. 이러한 이유로 사용자는 로봇에 장착되는 툴 및 작업물에 대한 정보를 가능한 한 정밀하게 로봇에게 입력해 주어야 한다.</p>
+
+  <div class="tip_icon3"></div>
+
+  <div class="tipbox3">
+    <p class="txt gothic_m">페이로드의 부정확한 입력은 로봇의 정밀한 위치 제어를 위한 내부 계산에 오류를 발생시켜 단기적으로는 이동시 위치의 정밀도를 떨어트리고, 장기적으로는 로봇의 수명에 악영향을 미치게 된다.</p>
+  </div>
+
+  <p class="imgcaption2"><span class="gothic_b dblue">&#60;표 Ⅵ-1&#62; </span>제품별 스펙 비교</p>
+
+  <table class="table2-col2">
+    <colgroup>
+      <col/>
+
+      <col/>
+
+      <col/>
+
+      <col/>
+    </colgroup>
+
+    <tbody>
+      <tr>
+        <td>
+          <p class="txt tcenter">구분</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">UR3</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">UR5</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">UR10</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">가반하중</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter"><span class="CharOverride-16">3 kg</span></p>
+        </td>
+
+        <td>
+          <p class="txt tcenter"><span class="CharOverride-16">5 kg</span></p>
+        </td>
+
+        <td>
+          <p class="txt tcenter"><span class="CharOverride-16">10 kg</span></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">작업 범위</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">500 mm</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">850 mm</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1300 mm</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">관절 범위</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">+/- 360°</p>
+
+          <p class="txt tcenter">Infinite rotation on end Joint</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">+/- 360°</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">+/- 360°</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">반복 정밀도</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">+/- 0.1 mm</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">+/- 0.1 mm</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">+/- 0.1 mm</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">관절 최대 속도</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">180°/sec and 360°/sec</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">180°/sec</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">120°/sec and 180°/sec</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">툴 최대 속도</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1000 mm/sec</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1000 mm/sec</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">1000 mm/sec</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">무게</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">11.0 kg</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">18.4 kg</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">28.9 kg</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">IP 등급</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">IP64</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">IP54</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">IP54</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">온도 범위</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0-50°C</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0-50°C</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">0-50°C</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">전원공급</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">100-240 V AC, 50-60 Hz</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">100-240 V AC, 50-60 Hz</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">100-240 V AC, 50-60 Hz</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="txt">&#160;</p>
+
+  <p class="txt indent1">로봇 설정에서 일차적인 페이로드는 설정은 일반적으로 부착되는 &#60;그림 VI-4&#62; (a)와 같이 장착되는 툴의 무게로 이야기할 수 있다. 일차적이라고 표현한 것은 실제로 응용되는 환경에서와 같이 작업물 취급이 있으면 작업물의 무게 정보를 포함한 설정이 필요하기 때문이다. 초기 설정이므로 이러한 작업물에 대한 부분은 고려하지 않고 설명하도록 하겠다. 페이로드는 단순히 무게 정보만으로는 로봇을 정밀 제어하기에는 부족하며, 추가로 무게 중심 정보가 필요하다. 이것을 사람에게 적용하자면 같은 1kg의 작업물이라고 하더라도 동그란 구 형태와 긴 막대기 형태를 움직이는데 필요한 힘이 다른 것과 마찬가지라 할 수 있겠다. &#60;그림 VI-4&#62; (b)는 그리퍼에서 무게 중심의 예이다. 무게 중심은 일반적으로 툴 플랜지 기준의 좌표계<span class="bracket">(&#60;그림 VI-4&#62; (c)의 ④ 참조)</span>를 활용하여 표시하게 되는데, 그림의 예에서는 X, Y축으로는 0에 근접하고, Z축으로 특정 거리에 무게 중심이 있을 것으로 추측할 수 있을 것이다. 이 무게 중심 역시 작업물을 취급하면 달라지는데, 페이로드를 추가하여 설정할 수 있다. &#60;그림 VI-4&#62; (c)는 현재 설정된 페이로드 정보로 ‘설치-일반-페이로드’에서 확인이 가능하다. 이곳에서 페이로드 정보의 수동 입력이 가능하다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part06-p148-img" src="../Images/part06-p148-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part06-p148-img2" src="../Images/part06-p148-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅵ-4&#62;</span> 페이로드 설정</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_34"><span class="txtball dwhite">나</span> 페이로드 설정</h3>
+
+  <p class="txt indent1">페이로드 정보의 입력을 위한 방법 역시 직업 입력 및 마법사를 사용하는 방법이 있다. 직접 입력은 해당 툴의 제작사에서 제공하는 정보를 이용하거나, &#60;그림 VI-4&#62; (a)와 같이 측정하는 방법이다. 무게의 경우 단순히 저울을 사용하여 가능할 수도 있지만, 무게 중심의 경우는 어려운 경우가 많다. 예를 들어 &#60;그림 VI-5&#62;와 같이 경우를 생각해 보자. 이 툴들의 무게와 무게 중심은 어떻게 되는가? 제작사의 제공 정보가 있다고 하더라도 그것은 어디까지나 툴 자체에 해당하는 것이다. 즉, 작업물이 있을 경우 작업물의 무게에 따라서 그때그때 달라진다. 마법사 기능은 이때 매우 편리하게 활용될 수 있다. 페이로드 마법사는 4개의 다른 자세 상태에서 자세를 유지하기 위한 각 조인트의 에너지 정보를 기반하여 현재 부착된 툴 및 작업물의 무게 및 무게 중심 정보를 계산한다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part06-p149-img" src="../Images/part06-p149-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅵ-5&#62;</span> 다양한 모양의 툴</p>
+  </div>
+
+  <p class="txt indent1">설정의 순서는 다음과 같다.</p>
+
+  <p class="txt number_list ml3">① 마법사 시작<span class="bracket">(&#60;그림 VI-6&#62; (a))</span>: ‘설치-일반-페이로드’에서 ‘측정’ 버튼을 클릭한다.</p>
+
+  <p class="txt number_list ml3">② 마법사 입력 순서 확인<span class="bracket">(&#60;그림 VI-6&#62; (b))</span>: 총 4개의 위치 설정과 관련된 정보를 확인하다. 다음을 클릭하여 첫 번째 위치정보를 입력할 수 있다.</p>
+
+  <p class="txt number_list ml3">③ 로봇 이동<span class="bracket">(&#60;그림 VI-6&#62; (c))</span>: 설정하고자 하는 위치를 입력하기 위한 단계이다. ‘위치 설정’ 버튼을 클릭하여 위치정보를 입력할 수 있다.</p>
+
+  <p class="txt number_list ml3">④ 위치 확정<span class="bracket">(&#60;</span><span class="본문_단어_색변경-각주-9-5-20 CharOverride-14">그림 VI-6&#62; (d))</span>: &#60;그림 VI-6&#62; (e)의 자세를 참조하여 프리드라이브 혹은 이동탭의 화살표 등을 이용하여 로봇을 자유롭게 위치 시킨 후 ‘확인’ 버튼을 누르면 해당 위치정보가 확정된다.</p>
+
+  <p class="txt number_list ml3">⑤ 로봇 자세 예시<span class="bracket">(&#60;그림 VI-6&#62; (e))</span>: 설정 과정에서 로봇의 자세 예시이다. 총 4개의 자세를 설정하여야 하는데, 이때 자세는 최대한 변화를 크게 하여 각 조인트에 필요한 에너지가 다양하게 만들어야 한다.</p>
+
+  <div class="tip_icon"></div>
+
+  <div class="tipbox">
+    <p class="txt gothic_m">페이로드 설정할 때 각 로봇의 자세는 최대한 변화가 많은 것이 최종 결과치의 정확도 향상을 위해서 유 리하다.</p>
+  </div>
+
+  <p class="txt number_list ml3">⑥ 페이로드 계산 완료<span class="bracket">(&#60;그림 VI-6&#62; (f))</span>: ②~⑤를 반복하여 4개의 위치정보를 입력하면 모든 위치의 LED가 녹색으로 바뀐다.</p>
+
+  <p class="txt number_list ml3">⑦ 페이로드 정보의 확인<span class="bracket">(&#60;그림 VI-6&#62; (g))</span>: 금번 측정에서 계산된 값을 확인할 수 있다.</p>
+
+  <div class="w100 img_center">
+    <img alt="part06-p150-img" src="../Images/part06-p150-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part06-p151-img" src="../Images/part06-p151-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part06-p151-img2" src="../Images/part06-p151-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅵ-6&#62;</span> 페이로드 설정 마법사</p>
+  </div>
+
+  <p class="txt indent1">&#60;그림 VI-7&#62;은 설정된 페이로드의 설정을 활용하는 방법이다. ‘프로그램 탭-기본-페이로드 설정’을 클릭하여 ‘페이로드 설정’ 명령어를 추가한다. ④번 영역에서 여기서 로봇에 현재 설정된 모든 페이로드 값을 선택하여 적용할 수 있다. 이 명령어는 작업물을 집는 순간 혹은 놓는 순간 등 로봇이 움직여야 하는 무게에 변경이 발생할 때마다 적용해야 한다. 다시 이야기하지만, 부정확한 정보는 로봇의 오동작 및 수명 단축으로 이어지게 되므로 반드시 유의하자.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part06-p152-img" src="../Images/part06-p152-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅵ-7&#62;</span> 설정된 페이로드의 프로그램 적용</p>
+  </div>
+</body>
+</html>

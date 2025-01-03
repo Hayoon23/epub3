@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:3e24f67f-d81d-4415-a2f1-58ce1e529bd1"/>
+    <meta name="dtb:depth" content="3"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>UR로봇으로 배우는 협동로봇 기본실습</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>INTRO</text>
+      </navLabel>
+      <content src="Text/header1.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>STRUCTURE 이 책의 구성과 체제</text>
+      </navLabel>
+      <content src="Text/header2.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>Part I 로봇의 구조</text>
+      </navLabel>
+      <content src="Text/Part01.xhtml"/>
+      <navPoint id="navPoint-4" playOrder="4">
+        <navLabel>
+          <text>실습과제 단순 이동 구현</text>
+        </navLabel>
+        <content src="Text/Part01-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-5" playOrder="5">
+        <navLabel>
+          <text>실습과제 3가지 이동 명령어</text>
+        </navLabel>
+        <content src="Text/Part01-as02.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-6" playOrder="6">
+        <navLabel>
+          <text>01 협동로봇의 이해</text>
+        </navLabel>
+        <content src="Text/Part01-chap01.xhtml"/>
+        <navPoint id="navPoint-7" playOrder="7">
+          <navLabel>
+            <text>가 로봇의 구성 요소</text>
+          </navLabel>
+          <content src="Text/Part01-chap01.xhtml#sigil_toc_id_1"/>
+        </navPoint>
+        <navPoint id="navPoint-8" playOrder="8">
+          <navLabel>
+            <text>나 폴리스코프</text>
+          </navLabel>
+          <content src="Text/Part01-chap01.xhtml#sigil_toc_id_2"/>
+        </navPoint>
+        <navPoint id="navPoint-9" playOrder="9">
+          <navLabel>
+            <text>다 이동 명령어</text>
+          </navLabel>
+          <content src="Text/Part01-chap01.xhtml#sigil_toc_id_3"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-10" playOrder="10">
+        <navLabel>
+          <text>02 로봇 처음 사용하기</text>
+        </navLabel>
+        <content src="Text/Part01-chap02.xhtml"/>
+        <navPoint id="navPoint-11" playOrder="11">
+          <navLabel>
+            <text>가 로봇 시동하기</text>
+          </navLabel>
+          <content src="Text/Part01-chap02.xhtml#sigil_toc_id_4"/>
+        </navPoint>
+        <navPoint id="navPoint-12" playOrder="12">
+          <navLabel>
+            <text>나 프리드라이브</text>
+          </navLabel>
+          <content src="Text/Part01-chap02.xhtml#sigil_toc_id_5"/>
+        </navPoint>
+        <navPoint id="navPoint-13" playOrder="13">
+          <navLabel>
+            <text>다 로봇의 종료</text>
+          </navLabel>
+          <content src="Text/Part01-chap02.xhtml#sigil_toc_id_6"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-14" playOrder="14">
+      <navLabel>
+        <text>Part II 픽앤플레이스</text>
+      </navLabel>
+      <content src="Text/Part02.xhtml"/>
+      <navPoint id="navPoint-15" playOrder="15">
+        <navLabel>
+          <text>실습과제 단순 이동 구현</text>
+        </navLabel>
+        <content src="Text/Part02-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-16" playOrder="16">
+        <navLabel>
+          <text>01 폴리스코프 기능</text>
+        </navLabel>
+        <content src="Text/Part02-chap01.xhtml"/>
+        <navPoint id="navPoint-17" playOrder="17">
+          <navLabel>
+            <text>가 실행 탭</text>
+          </navLabel>
+          <content src="Text/Part02-chap01.xhtml#sigil_toc_id_7"/>
+        </navPoint>
+        <navPoint id="navPoint-18" playOrder="18">
+          <navLabel>
+            <text>나 프로그램 탭</text>
+          </navLabel>
+          <content src="Text/Part02-chap01.xhtml#sigil_toc_id_8"/>
+        </navPoint>
+        <navPoint id="navPoint-19" playOrder="19">
+          <navLabel>
+            <text>다 설치 탭</text>
+          </navLabel>
+          <content src="Text/Part02-chap01.xhtml#sigil_toc_id_9"/>
+        </navPoint>
+        <navPoint id="navPoint-20" playOrder="20">
+          <navLabel>
+            <text>라 이동 탭</text>
+          </navLabel>
+          <content src="Text/Part02-chap01.xhtml#sigil_toc_id_10"/>
+        </navPoint>
+        <navPoint id="navPoint-21" playOrder="21">
+          <navLabel>
+            <text>마 I/O 탭</text>
+          </navLabel>
+          <content src="Text/Part02-chap01.xhtml#sigil_toc_id_11"/>
+        </navPoint>
+        <navPoint id="navPoint-22" playOrder="22">
+          <navLabel>
+            <text>바 로그 탭</text>
+          </navLabel>
+          <content src="Text/Part02-chap01.xhtml#sigil_toc_id_12"/>
+        </navPoint>
+        <navPoint id="navPoint-23" playOrder="23">
+          <navLabel>
+            <text>사 햄버거 메뉴</text>
+          </navLabel>
+          <content src="Text/Part02-chap01.xhtml#sigil_toc_id_13"/>
+        </navPoint>
+        <navPoint id="navPoint-24" playOrder="24">
+          <navLabel>
+            <text>아 파일 생성/열기/저장</text>
+          </navLabel>
+          <content src="Text/Part02-chap01.xhtml#sigil_toc_id_14"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-25" playOrder="25">
+        <navLabel>
+          <text>02 툴 사용 및 웨이포인트 이름 변경</text>
+        </navLabel>
+        <content src="Text/Part02-chap02.xhtml"/>
+        <navPoint id="navPoint-26" playOrder="26">
+          <navLabel>
+            <text>가 툴 사용</text>
+          </navLabel>
+          <content src="Text/Part02-chap02.xhtml#sigil_toc_id_15"/>
+        </navPoint>
+        <navPoint id="navPoint-27" playOrder="27">
+          <navLabel>
+            <text>나 웨이포인트 이름 변경</text>
+          </navLabel>
+          <content src="Text/Part02-chap02.xhtml#sigil_toc_id_16"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-28" playOrder="28">
+      <navLabel>
+        <text>Part III 외부 장치와의 연계</text>
+      </navLabel>
+      <content src="Text/Part03.xhtml"/>
+      <navPoint id="navPoint-29" playOrder="29">
+        <navLabel>
+          <text>실습과제 단순 이동 구현</text>
+        </navLabel>
+        <content src="Text/part03-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-30" playOrder="30">
+        <navLabel>
+          <text>01 외부 장치의 연결</text>
+        </navLabel>
+        <content src="Text/Part03-chap01.xhtml"/>
+        <navPoint id="navPoint-31" playOrder="31">
+          <navLabel>
+            <text>가 컨트롤 박스 I/O</text>
+          </navLabel>
+          <content src="Text/Part03-chap01.xhtml#sigil_toc_id_17"/>
+        </navPoint>
+        <navPoint id="navPoint-32" playOrder="32">
+          <navLabel>
+            <text>나 I/O 탭 신호 관찰</text>
+          </navLabel>
+          <content src="Text/Part03-chap01.xhtml#sigil_toc_id_18"/>
+        </navPoint>
+        <navPoint id="navPoint-33" playOrder="33">
+          <navLabel>
+            <text>다 I/O 이름 변경</text>
+          </navLabel>
+          <content src="Text/Part03-chap01.xhtml#sigil_toc_id_19"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-34" playOrder="34">
+        <navLabel>
+          <text>02 외부 입출력 장치의 프로그램 활용</text>
+        </navLabel>
+        <content src="Text/Part03-chap02.xhtml"/>
+        <navPoint id="navPoint-35" playOrder="35">
+          <navLabel>
+            <text>가기다림</text>
+          </navLabel>
+          <content src="Text/Part03-chap02.xhtml#sigil_toc_id_20"/>
+        </navPoint>
+        <navPoint id="navPoint-36" playOrder="36">
+          <navLabel>
+            <text>나 지정</text>
+          </navLabel>
+          <content src="Text/Part03-chap02.xhtml#sigil_toc_id_21"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-37" playOrder="37">
+      <navLabel>
+        <text>Part IV 동작 최적화</text>
+      </navLabel>
+      <content src="Text/Part04.xhtml"/>
+      <navPoint id="navPoint-38" playOrder="38">
+        <navLabel>
+          <text>실습과제</text>
+        </navLabel>
+        <content src="Text/Part04-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-39" playOrder="39">
+        <navLabel>
+          <text>실습과제 동작 최적화</text>
+        </navLabel>
+        <content src="Text/Part04-as02.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-40" playOrder="40">
+        <navLabel>
+          <text>01 스레드(Thread)</text>
+        </navLabel>
+        <content src="Text/Part04-chap01.xhtml"/>
+        <navPoint id="navPoint-41" playOrder="41">
+          <navLabel>
+            <text>가 픽앤플레이스 동작 비효율 관찰</text>
+          </navLabel>
+          <content src="Text/Part04-chap01.xhtml#sigil_toc_id_22"/>
+        </navPoint>
+        <navPoint id="navPoint-42" playOrder="42">
+          <navLabel>
+            <text>나 스레드</text>
+          </navLabel>
+          <content src="Text/Part04-chap01.xhtml#sigil_toc_id_23"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-43" playOrder="43">
+        <navLabel>
+          <text>02 최적화</text>
+        </navLabel>
+        <content src="Text/Part04-chap02.xhtml"/>
+        <navPoint id="navPoint-44" playOrder="44">
+          <navLabel>
+            <text>가 필요성</text>
+          </navLabel>
+          <content src="Text/Part04-chap02.xhtml#sigil_toc_id_24"/>
+        </navPoint>
+        <navPoint id="navPoint-45" playOrder="45">
+          <navLabel>
+            <text>나 반지름 혼합</text>
+          </navLabel>
+          <content src="Text/Part04-chap02.xhtml#sigil_toc_id_25"/>
+        </navPoint>
+        <navPoint id="navPoint-46" playOrder="46">
+          <navLabel>
+            <text>다 이동 속도 변경</text>
+          </navLabel>
+          <content src="Text/Part04-chap02.xhtml#sigil_toc_id_26"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-47" playOrder="47">
+        <navLabel>
+          <text>03 타이머 및 팝업</text>
+        </navLabel>
+        <content src="Text/Part04-chap03.xhtml"/>
+        <navPoint id="navPoint-48" playOrder="48">
+          <navLabel>
+            <text>가 타이머의 활용</text>
+          </navLabel>
+          <content src="Text/Part04-chap03.xhtml#sigil_toc_id_27"/>
+        </navPoint>
+        <navPoint id="navPoint-49" playOrder="49">
+          <navLabel>
+            <text>나팝업</text>
+          </navLabel>
+          <content src="Text/Part04-chap03.xhtml#sigil_toc_id_28"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-50" playOrder="50">
+      <navLabel>
+        <text>Part V 로봇 산업 안전</text>
+      </navLabel>
+      <content src="Text/Part05.xhtml"/>
+      <navPoint id="navPoint-51" playOrder="51">
+        <navLabel>
+          <text>실습과제</text>
+        </navLabel>
+        <content src="Text/Part05-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-52" playOrder="52">
+        <navLabel>
+          <text>01협동로봇 작업장 안전 규정</text>
+        </navLabel>
+        <content src="Text/Part05-chap01.xhtml"/>
+        <navPoint id="navPoint-53" playOrder="53">
+          <navLabel>
+            <text>가 작업장 안전 규정 목적</text>
+          </navLabel>
+          <content src="Text/Part05-chap01.xhtml#sigil_toc_id_29"/>
+        </navPoint>
+        <navPoint id="navPoint-54" playOrder="54">
+          <navLabel>
+            <text>나 세부 안전 점검 항목</text>
+          </navLabel>
+          <content src="Text/Part05-chap01.xhtml#sigil_toc_id_30"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-55" playOrder="55">
+        <navLabel>
+          <text>02 사용자 설명서</text>
+        </navLabel>
+        <content src="Text/Part05-chap02.xhtml"/>
+        <navPoint id="navPoint-56" playOrder="56">
+          <navLabel>
+            <text>가 하드웨어 설치 안전</text>
+          </navLabel>
+          <content src="Text/Part05-chap02.xhtml#sigil_toc_id_31"/>
+        </navPoint>
+        <navPoint id="navPoint-57" playOrder="57">
+          <navLabel>
+            <text>나 소프트웨어(폴리스코프) 사용 안전</text>
+          </navLabel>
+          <content src="Text/Part05-chap02.xhtml#sigil_toc_id_32"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-58" playOrder="58">
+      <navLabel>
+        <text>Part VI 로봇의 주요 설정</text>
+      </navLabel>
+      <content src="Text/Part06.xhtml"/>
+      <navPoint id="navPoint-59" playOrder="59">
+        <navLabel>
+          <text>실습과제</text>
+        </navLabel>
+        <content src="Text/Part06-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-60" playOrder="60">
+        <navLabel>
+          <text>실습과제 TCP 설정</text>
+        </navLabel>
+        <content src="Text/Part06-as02.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-61" playOrder="61">
+        <navLabel>
+          <text>실습과제 자세 설정</text>
+        </navLabel>
+        <content src="Text/Part06-as03.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-62" playOrder="62">
+        <navLabel>
+          <text>01 페이로드 설정</text>
+        </navLabel>
+        <content src="Text/Part06-chap01.xhtml"/>
+        <navPoint id="navPoint-63" playOrder="63">
+          <navLabel>
+            <text>가 페이로드 개요</text>
+          </navLabel>
+          <content src="Text/Part06-chap01.xhtml#sigil_toc_id_33"/>
+        </navPoint>
+        <navPoint id="navPoint-64" playOrder="64">
+          <navLabel>
+            <text>나 페이로드 설정</text>
+          </navLabel>
+          <content src="Text/Part06-chap01.xhtml#sigil_toc_id_34"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-65" playOrder="65">
+        <navLabel>
+          <text>02 TCP 설정</text>
+        </navLabel>
+        <content src="Text/Part06-chap02.xhtml"/>
+        <navPoint id="navPoint-66" playOrder="66">
+          <navLabel>
+            <text>가 TCP 개요</text>
+          </navLabel>
+          <content src="Text/Part06-chap02.xhtml#sigil_toc_id_35"/>
+        </navPoint>
+        <navPoint id="navPoint-67" playOrder="67">
+          <navLabel>
+            <text>나 TCP 설정</text>
+          </navLabel>
+          <content src="Text/Part06-chap02.xhtml#sigil_toc_id_36"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-68" playOrder="68">
+        <navLabel>
+          <text>03 자세 설정</text>
+        </navLabel>
+        <content src="Text/Part06-chap03.xhtml"/>
+        <navPoint id="navPoint-69" playOrder="69">
+          <navLabel>
+            <text>가 자세 개요</text>
+          </navLabel>
+          <content src="Text/Part06-chap03.xhtml#sigil_toc_id_37"/>
+        </navPoint>
+        <navPoint id="navPoint-70" playOrder="70">
+          <navLabel>
+            <text>나 자세 설정</text>
+          </navLabel>
+          <content src="Text/Part06-chap03.xhtml#sigil_toc_id_38"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-71" playOrder="71">
+      <navLabel>
+        <text>Part VII 조건 동작 구현</text>
+      </navLabel>
+      <content src="Text/Part07.xhtml"/>
+      <navPoint id="navPoint-72" playOrder="72">
+        <navLabel>
+          <text>실습과제 조건 동작 구현</text>
+        </navLabel>
+        <content src="Text/Part07-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-73" playOrder="73">
+        <navLabel>
+          <text>실습과제 조건 동작 구현 응용</text>
+        </navLabel>
+        <content src="Text/Part07-as02.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-74" playOrder="74">
+        <navLabel>
+          <text>01 IF 구조문</text>
+        </navLabel>
+        <content src="Text/Part07-chap01.xhtml"/>
+        <navPoint id="navPoint-75" playOrder="75">
+          <navLabel>
+            <text>가 IF 구조문의 이해</text>
+          </navLabel>
+          <content src="Text/Part07-chap01.xhtml#sigil_toc_id_39"/>
+        </navPoint>
+        <navPoint id="navPoint-76" playOrder="76">
+          <navLabel>
+            <text>나 블리언 조건 구현</text>
+          </navLabel>
+          <content src="Text/Part07-chap01.xhtml#sigil_toc_id_40"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-77" playOrder="77">
+        <navLabel>
+          <text>02 폴리스코프에서 조건 구현</text>
+        </navLabel>
+        <content src="Text/Part07-chap02.xhtml"/>
+        <navPoint id="navPoint-78" playOrder="78">
+          <navLabel>
+            <text>가 IF 구조문의 생성</text>
+          </navLabel>
+          <content src="Text/Part07-chap02.xhtml#sigil_toc_id_41"/>
+        </navPoint>
+        <navPoint id="navPoint-79" playOrder="79">
+          <navLabel>
+            <text>나 블리언 조건의 구현</text>
+          </navLabel>
+          <content src="Text/Part07-chap02.xhtml#sigil_toc_id_42"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-80" playOrder="80">
+      <navLabel>
+        <text>Part VIII 안전 구역 설정</text>
+      </navLabel>
+      <content src="Text/Part08.xhtml"/>
+      <navPoint id="navPoint-81" playOrder="81">
+        <navLabel>
+          <text>실습과제 안전 구역 설정</text>
+        </navLabel>
+        <content src="Text/Part08-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-82" playOrder="82">
+        <navLabel>
+          <text>01 안전 구역 설정</text>
+        </navLabel>
+        <content src="Text/Part08-chap01.xhtml"/>
+        <navPoint id="navPoint-83" playOrder="83">
+          <navLabel>
+            <text>가 안전 구역 설정의 필요성</text>
+          </navLabel>
+          <content src="Text/Part08-chap01.xhtml#sigil_toc_id_43"/>
+        </navPoint>
+        <navPoint id="navPoint-84" playOrder="84">
+          <navLabel>
+            <text>가 안전 구역 설정의 필요성</text>
+          </navLabel>
+          <content src="Text/Part08-chap01.xhtml#sigil_toc_id_44"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-85" playOrder="85">
+      <navLabel>
+        <text>Part IX 상대 위치 이동</text>
+      </navLabel>
+      <content src="Text/Part09.xhtml"/>
+      <navPoint id="navPoint-86" playOrder="86">
+        <navLabel>
+          <text>실습과제 상대 위치 이동 구현</text>
+        </navLabel>
+        <content src="Text/Part09-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-87" playOrder="87">
+        <navLabel>
+          <text>01 상대 위치 이동</text>
+        </navLabel>
+        <content src="Text/Part09-chap01.xhtml"/>
+        <navPoint id="navPoint-88" playOrder="88">
+          <navLabel>
+            <text>가 상대 위치 이동의 필요성</text>
+          </navLabel>
+          <content src="Text/Part09-chap01.xhtml#sigil_toc_id_45"/>
+        </navPoint>
+        <navPoint id="navPoint-89" playOrder="89">
+          <navLabel>
+            <text>나 폴리스코프로 상대 위치 이동 구현</text>
+          </navLabel>
+          <content src="Text/Part09-chap01.xhtml#sigil_toc_id_46"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-90" playOrder="90">
+        <navLabel>
+          <text>02 이동 탭 고급 활용</text>
+        </navLabel>
+        <content src="Text/Part09-chap02.xhtml"/>
+        <navPoint id="navPoint-91" playOrder="91">
+          <navLabel>
+            <text>가 TCP 위치의 정량 이동</text>
+          </navLabel>
+          <content src="Text/Part09-chap02.xhtml#sigil_toc_id_47"/>
+        </navPoint>
+        <navPoint id="navPoint-92" playOrder="92">
+          <navLabel>
+            <text>나 조인트 위치의 정량 이동</text>
+          </navLabel>
+          <content src="Text/Part09-chap02.xhtml#sigil_toc_id_48"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-93" playOrder="93">
+      <navLabel>
+        <text>Part X 서브프로그램</text>
+      </navLabel>
+      <content src="Text/Part10.xhtml"/>
+      <navPoint id="navPoint-94" playOrder="94">
+        <navLabel>
+          <text>실습과제 폴더 및 서브프로그램 활용</text>
+        </navLabel>
+        <content src="Text/Part10-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-95" playOrder="95">
+        <navLabel>
+          <text>01 폴더 및 서브프로그램 활용</text>
+        </navLabel>
+        <content src="Text/Part10-chap01.xhtml"/>
+        <navPoint id="navPoint-96" playOrder="96">
+          <navLabel>
+            <text>가 프로그램 가독성</text>
+          </navLabel>
+          <content src="Text/Part10-chap01.xhtml#sigil_toc_id_49"/>
+        </navPoint>
+        <navPoint id="navPoint-97" playOrder="97">
+          <navLabel>
+            <text>나 폴더</text>
+          </navLabel>
+          <content src="Text/Part10-chap01.xhtml#sigil_toc_id_50"/>
+        </navPoint>
+        <navPoint id="navPoint-98" playOrder="98">
+          <navLabel>
+            <text>다 서브프로그램</text>
+          </navLabel>
+          <content src="Text/Part10-chap01.xhtml#sigil_toc_id_51"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-99" playOrder="99">
+        <navLabel>
+          <text>02 순서도</text>
+        </navLabel>
+        <content src="Text/Part10-chap02.xhtml"/>
+        <navPoint id="navPoint-100" playOrder="100">
+          <navLabel>
+            <text>가 순서도의 필요성</text>
+          </navLabel>
+          <content src="Text/Part10-chap02.xhtml#sigil_toc_id_52"/>
+        </navPoint>
+        <navPoint id="navPoint-101" playOrder="101">
+          <navLabel>
+            <text>나 순서도의 구성 요소</text>
+          </navLabel>
+          <content src="Text/Part10-chap02.xhtml#sigil_toc_id_53"/>
+        </navPoint>
+        <navPoint id="navPoint-102" playOrder="102">
+          <navLabel>
+            <text>다 순서도의 활용</text>
+          </navLabel>
+          <content src="Text/Part10-chap02.xhtml#sigil_toc_id_54"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-103" playOrder="103">
+      <navLabel>
+        <text>Part XI 반복 동작 구현</text>
+      </navLabel>
+      <content src="Text/Part11.xhtml"/>
+      <navPoint id="navPoint-104" playOrder="104">
+        <navLabel>
+          <text>실습과제 루프 반복문 활용</text>
+        </navLabel>
+        <content src="Text/Part11-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-105" playOrder="105">
+        <navLabel>
+          <text>01 반복문</text>
+        </navLabel>
+        <content src="Text/Part11-chap01.xhtml"/>
+        <navPoint id="navPoint-106" playOrder="106">
+          <navLabel>
+            <text>가 개요</text>
+          </navLabel>
+          <content src="Text/Part11-chap01.xhtml#sigil_toc_id_55"/>
+        </navPoint>
+        <navPoint id="navPoint-107" playOrder="107">
+          <navLabel>
+            <text>나 For/While 반복문</text>
+          </navLabel>
+          <content src="Text/Part11-chap01.xhtml#sigil_toc_id_56"/>
+        </navPoint>
+        <navPoint id="navPoint-108" playOrder="108">
+          <navLabel>
+            <text>다 폴리스코프의 루프</text>
+          </navLabel>
+          <content src="Text/Part11-chap01.xhtml#sigil_toc_id_57"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-109" playOrder="109">
+        <navLabel>
+          <text>02 사용자 입력 활용</text>
+        </navLabel>
+        <content src="Text/Part11-chap02.xhtml"/>
+        <navPoint id="navPoint-110" playOrder="110">
+          <navLabel>
+            <text>가 개요</text>
+          </navLabel>
+          <content src="Text/Part11-chap02.xhtml#sigil_toc_id_58"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-111" playOrder="111">
+      <navLabel>
+        <text>Part XII 힘 제어</text>
+      </navLabel>
+      <content src="Text/Part12.xhtml"/>
+      <navPoint id="navPoint-112" playOrder="112">
+        <navLabel>
+          <text>실습과제 안전 구역 설정</text>
+        </navLabel>
+        <content src="Text/Part12-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-113" playOrder="113">
+        <navLabel>
+          <text>실습과제 힘 제어를 이용한 블록 적층하기 2</text>
+        </navLabel>
+        <content src="Text/Part12-as02.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-114" playOrder="114">
+        <navLabel>
+          <text>01 힘 제어</text>
+        </navLabel>
+        <content src="Text/Part12-chap01.xhtml"/>
+        <navPoint id="navPoint-115" playOrder="115">
+          <navLabel>
+            <text>가 필요성</text>
+          </navLabel>
+          <content src="Text/Part12-chap01.xhtml#sigil_toc_id_59"/>
+        </navPoint>
+        <navPoint id="navPoint-116" playOrder="116">
+          <navLabel>
+            <text>나 포스 템플릿 활용</text>
+          </navLabel>
+          <content src="Text/Part12-chap01.xhtml#sigil_toc_id_60"/>
+        </navPoint>
+        <navPoint id="navPoint-117" playOrder="117">
+          <navLabel>
+            <text>다 포스와 함께 사용하는 스크립트</text>
+          </navLabel>
+          <content src="Text/Part12-chap01.xhtml#sigil_toc_id_61"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-118" playOrder="118">
+        <navLabel>
+          <text>02 If/Else 고급 활용</text>
+        </navLabel>
+        <content src="Text/Part12-chap02.xhtml"/>
+        <navPoint id="navPoint-119" playOrder="119">
+          <navLabel>
+            <text>가 프로그램 전체 구성 – If/Else 활용</text>
+          </navLabel>
+          <content src="Text/Part12-chap02.xhtml#sigil_toc_id_62"/>
+        </navPoint>
+        <navPoint id="navPoint-120" playOrder="120">
+          <navLabel>
+            <text>나 변수의 할당</text>
+          </navLabel>
+          <content src="Text/Part12-chap02.xhtml#sigil_toc_id_63"/>
+        </navPoint>
+        <navPoint id="navPoint-121" playOrder="121">
+          <navLabel>
+            <text>다 스레드를 활용한 실시간 압력값 관찰</text>
+          </navLabel>
+          <content src="Text/Part12-chap02.xhtml#sigil_toc_id_64"/>
+        </navPoint>
+        <navPoint id="navPoint-122" playOrder="122">
+          <navLabel>
+            <text>라 if 표현식 계속 점검 모드</text>
+          </navLabel>
+          <content src="Text/Part12-chap02.xhtml#sigil_toc_id_65"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-123" playOrder="123">
+      <navLabel>
+        <text>Part XIII 팔레타이징</text>
+      </navLabel>
+      <content src="Text/Part13.xhtml"/>
+      <navPoint id="navPoint-124" playOrder="124">
+        <navLabel>
+          <text>실습과제 이차원 팔레타이징 구현</text>
+        </navLabel>
+        <content src="Text/Part13-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-125" playOrder="125">
+        <navLabel>
+          <text>실습과제 팔레타이징-힘제어 연계 구현</text>
+        </navLabel>
+        <content src="Text/Part13-as02.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-126" playOrder="126">
+        <navLabel>
+          <text>01 팔레타이징의 이해</text>
+        </navLabel>
+        <content src="Text/Part13-chap01.xhtml"/>
+        <navPoint id="navPoint-127" playOrder="127">
+          <navLabel>
+            <text>가 팔레타이징의 활용</text>
+          </navLabel>
+          <content src="Text/Part13-chap01.xhtml#sigil_toc_id_66"/>
+        </navPoint>
+        <navPoint id="navPoint-128" playOrder="128">
+          <navLabel>
+            <text>나 팔레타이징 알고리즘</text>
+          </navLabel>
+          <content src="Text/Part13-chap01.xhtml#sigil_toc_id_67"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-129" playOrder="129">
+        <navLabel>
+          <text>02 팔레타이징 템플릿 활용</text>
+        </navLabel>
+        <content src="Text/Part13-chap02.xhtml"/>
+        <navPoint id="navPoint-130" playOrder="130">
+          <navLabel>
+            <text>가 팔레트 생성 및 기본 설정</text>
+          </navLabel>
+          <content src="Text/Part13-chap02.xhtml#sigil_toc_id_68"/>
+        </navPoint>
+        <navPoint id="navPoint-131" playOrder="131">
+          <navLabel>
+            <text>나 패턴 설정</text>
+          </navLabel>
+          <content src="Text/Part13-chap02.xhtml#sigil_toc_id_69"/>
+        </navPoint>
+        <navPoint id="navPoint-132" playOrder="132">
+          <navLabel>
+            <text>다 레이어 설정</text>
+          </navLabel>
+          <content src="Text/Part13-chap02.xhtml#sigil_toc_id_70"/>
+        </navPoint>
+        <navPoint id="navPoint-133" playOrder="133">
+          <navLabel>
+            <text>라 각각의 아이템 설정</text>
+          </navLabel>
+          <content src="Text/Part13-chap02.xhtml#sigil_toc_id_71"/>
+        </navPoint>
+        <navPoint id="navPoint-134" playOrder="134">
+          <navLabel>
+            <text>마 전후 작업 추가</text>
+          </navLabel>
+          <content src="Text/Part13-chap02.xhtml#sigil_toc_id_72"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-135" playOrder="135">
+      <navLabel>
+        <text>Part XIV 유연한 재배치</text>
+      </navLabel>
+      <content src="Text/Part14.xhtml"/>
+      <navPoint id="navPoint-136" playOrder="136">
+        <navLabel>
+          <text>실습과제</text>
+        </navLabel>
+        <content src="Text/Part14-as01.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-137" playOrder="137">
+        <navLabel>
+          <text>01 유연한 재배치 개요</text>
+        </navLabel>
+        <content src="Text/Part14-chap01.xhtml"/>
+        <navPoint id="navPoint-138" playOrder="138">
+          <navLabel>
+            <text>가 필요성</text>
+          </navLabel>
+          <content src="Text/Part14-chap01.xhtml#sigil_toc_id_73"/>
+        </navPoint>
+        <navPoint id="navPoint-139" playOrder="139">
+          <navLabel>
+            <text>나 좌표계 측면에서의 유연한 재배치</text>
+          </navLabel>
+          <content src="Text/Part14-chap01.xhtml#sigil_toc_id_74"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-140" playOrder="140">
+        <navLabel>
+          <text>02 유연한 재배치 프로그램 방법</text>
+        </navLabel>
+        <content src="Text/Part14-chap02.xhtml"/>
+        <navPoint id="navPoint-141" playOrder="141">
+          <navLabel>
+            <text>가 유연한 재배치를 위한 절차</text>
+          </navLabel>
+          <content src="Text/Part14-chap02.xhtml#sigil_toc_id_75"/>
+        </navPoint>
+        <navPoint id="navPoint-142" playOrder="142">
+          <navLabel>
+            <text>나 플레인의 생성</text>
+          </navLabel>
+          <content src="Text/Part14-chap02.xhtml#sigil_toc_id_76"/>
+        </navPoint>
+        <navPoint id="navPoint-143" playOrder="143">
+          <navLabel>
+            <text>다 플레인의 적용</text>
+          </navLabel>
+          <content src="Text/Part14-chap02.xhtml#sigil_toc_id_77"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-144" playOrder="144">
+      <navLabel>
+        <text>별첨 시뮬레이터 설치</text>
+      </navLabel>
+      <content src="Text/supplement.xhtml"/>
+      <navPoint id="navPoint-145" playOrder="145">
+        <navLabel>
+          <text>01 로봇 시뮬레이션 환경 구축</text>
+        </navLabel>
+        <content src="Text/Section0059.xhtml"/>
+        <navPoint id="navPoint-146" playOrder="146">
+          <navLabel>
+            <text>가 개요</text>
+          </navLabel>
+          <content src="Text/Section0059.xhtml#sigil_toc_id_78"/>
+        </navPoint>
+        <navPoint id="navPoint-147" playOrder="147">
+          <navLabel>
+            <text>나 URSim의 설치</text>
+          </navLabel>
+          <content src="Text/Section0059.xhtml#sigil_toc_id_79"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-148" playOrder="148">
+        <navLabel>
+          <text>02 가상 머신의 설치 및 시뮬레이터 구동</text>
+        </navLabel>
+        <content src="Text/Section0060.xhtml"/>
+        <navPoint id="navPoint-149" playOrder="149">
+          <navLabel>
+            <text>가 가상 머신의 설치</text>
+          </navLabel>
+          <content src="Text/Section0060.xhtml#sigil_toc_id_80"/>
+        </navPoint>
+        <navPoint id="navPoint-150" playOrder="150">
+          <navLabel>
+            <text>나 가상 머신의 구동</text>
+          </navLabel>
+          <content src="Text/Section0060.xhtml#sigil_toc_id_81"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-151" playOrder="151">
+        <navLabel>
+          <text>참고 문헌 및 웹 사이트</text>
+        </navLabel>
+        <content src="Text/references.xhtml"/>
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>

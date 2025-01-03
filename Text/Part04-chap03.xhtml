@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">3 타이머 및 팝업</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_27"><span class="txtball dwhite">가</span> 타이머의 활용</h3>
+
+  <p class="txt indent1">최적화 정도를 수치로 확인하기 위해서 ‘타이머’ 기능을 활용할 수 있다. &#60;그림 IV-8&#62;은 타이머의 활용 예이다. 이 기능은 ‘프로그램 탭’-‘고급’-‘타이머’를 추가하여 사용하게 되는데 기본 3개를 생성한다. 생성된 타이머는 ④의 위쪽에 있는 타이머 변수를 ‘타이머_1’과 같이 하나로 설정해야 한다. 이후 이 타이머를 필요에 따라서 각각 ‘초기화’, ‘시작’, ‘중지’로 설정한다. 초기화는 해당 타이머의 시간을 ‘0’으로 초기화한다. ‘시작’이 위치한 부분부터 시간이 증가하게 된다. ‘중지’가 있는 위치에서 타이머는 멈추게 된다. 로봇 프로그램이 반복적으로 계속 동작하므로 정확한 시간 확인이 어려울 수 있는데, 이를 위해서는 ‘팝업’ 혹은 ‘기다림’ 등의 특별한 명령어를 추가할 수 있다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part04-p102-img" src="../Images/part04-p102-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅳ-8&#62;</span> 타이머 활용</p>
+  </div>
+
+  <div class="tip_icon3"></div>
+
+  <div class="tipbox3">
+    <p class="txt gothic_m">많은 학생들이 결과가 ‘0’ 혹은 ‘다른 고정된 값’이 나온다는 질문을 한다. 결론은 ‘동일한 타이머’를 가지고 측 정해야 한다는 것이다. 타이머를 추가하면 타이머의 변수명은 ‘타이머_1’, ‘타이머_2’와 같이 순차적으로 증 가한다. 타이머_1을 초기화하고, 타이머_2를 시작해서, 타이머_3의 결과를 보고 있는 것은 아닌지 확인해 보자.</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_28"><span class="txtball dwhite">나</span>팝업</h3>
+
+  <p class="txt indent1">팝업은 사용자가 다양한 정보 확인하는 용도로 사용할 수 있다. 팝업 기능이 활성화되면 구동 프로그램은 일시 중지 상태가 되며 사용자의 입력 정보를 기다린다. 타이머 정보 역시 팝업을 활용하여 확인할 수 있다. 팝업은 기본적으로 프로그램 도중 발생하는 돌발 상황을 사용자에게 확실하게 알려주기 위한 기능이다.</p>
+
+  <p class="txt indent1">팝업 기능은 ‘프로그램’-‘기본’-‘팝업’을 선택하여 사용할 수 있다. 팝업 명령어를 선택하면 ④와 같이 세부 설정이 가능한데, 기본은 문자형으로 메시지, 경고, 오류 등의 내용을 보여준다. 팝업은 단순 문자 이외에 타이머와 같은 변수도 보여줄 수 있는데, 이를 위해서는 우측 상단에 있는 ‘ <img class="h10" alt="part04-p103-img2" src="../Images/part04-p103-img2.jpg"/> ’를 클릭하여 &#60;그림 IV-9&#62;와 같이 ‘변수’로 변경해야 한다. 그리고 변수에서 해당 타이머를 선택하면 그 팝업 순간의 변수 시간 정보를 확인할 수 있다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part04-p103-img" src="../Images/part04-p103-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅳ-9&#62;</span> 팝업</p>
+  </div>
+
+  <div class="txtbox number_list">
+    <p class="txt">1. 스레드의 정의 및 필요성을 설명한다.</p>
+
+    <p class="txt">2. 적절한 예(예: 3장의 프로그램에서 다수의 블록이 있을 때 발생하는 문제)를 통하여 스레드의 필요성을 강조한다.</p>
+
+    <p class="txt">3. 스레드를 이용하여 로봇 동작 및 컨베이어벨트의 동작을 비동기화해야 함을 설명하며, 사용상 주의점을 강조한다.</p>
+
+    <p class="txt">4. 타이머를 활용하여 최적화 동작의 시간을 측정하는 방법을 설명한다.</p>
+
+    <p class="txt">5. 다양한 방법을 통한 최적화의 효과를 학생들이 실질적으로 이해하도록 유도한다.</p>
+
+    <p class="txt">6. 불필요한 최적화에 관해서 설명한다.</p>
+  </div>
+
+  <p class="txt gothic_b">◉ 실습과제 결과 예시</p>
+
+  <p class="txt gothic_b dblue2">■ 실습과제 1 프로젝트 개발 예시</p>
+
+  <div class="w30 img_center">
+    <img alt="part04-p105-img" src="../Images/part04-p105-img.jpg"/>
+  </div>
+
+  <p class="txt gothic_b dblue2">■ 실습과제 2는 웨이포인트와 이동 명령어의 설정 변경 사항으로 별도 제시하지 않음.</p>
+</body>
+</html>

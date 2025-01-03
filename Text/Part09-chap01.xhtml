@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">1 상대 위치 이동</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_45"><span class="txtball dwhite">가</span> 상대 위치 이동의 필요성</h3>
+
+  <p class="txt indent1">지금까지 우리는 많은 로봇 동작을 구현할 때 이동할 대상 위치 정보는 늘 ‘고정’되어 있었다. 하지만 실제 동작 구현에는 ‘고정’된 위치로의 이동만으로는 구현이 힘들 때가 발생한다.예를 들자면 ‘인형뽑기’ 게임을 구현한다고 가정하자. 조이스틱으로 이동하는 위치는 프로그램 구현할 때부터 고정된 위치가 아닐 것이다. 사용자 조작으로 결정되는 변화하는 값이다. 좌우 이동을 통해서 대략적인 위치를 결정한다면, 그 위치에서 아래로 내려와야 하는데 지금까지 배운 고정 위치로는 구현이 어렵다. 이런 상황은 생각보다 자주 발생한다. 물론 프로그래밍을 깊이 학습한 경험이 있다면 위치 정보를 변수로 만들어 사용한다면 가능하지만, 어느 정도의 이해 및 지식이 필요하다. 폴리스코프는 앞서 이야기한 것처럼 프로그래밍이 익숙하지 않은 사람들도 충분히 활용할 수 있도록 하는 것을 목표하고 있으며, 저자의 생각으로는 상대 위치 이동은 이러한 목적으로 만들어진 것으로 보인다.</p>
+
+  <p class="txt indent1">웨이포인트의 기본 설정값인 고정 위치는 TCP가 위치해야 할 좌표 정보로 표시된다. 더 구체적으로는 위치 정보인 X, Y, Z 및 방향에 대한 정보인 RX, RY, RX이다. 이에 반해서 상대 위치는 거리 및 방향 정보를 가진다. 거리 및 방향 정보는 해당 이동 동작이 있을 때 지금의 위치에서 그 거리 및 방향에 따라서 이동하게 되는 특징이 있다. 인형뽑기를 다시 예를 든다면 우리가 집어야 하는 인형의 위치에 툴이 있다면, 상대 위치 이동은 그 툴의 현재 위치에서 아래 방향으로 설정된 거리만큼 내려가게 되는 것이다.</p>
+
+  <div class="tip_icon"></div>
+
+  <div class="tipbox">
+    <p class="txt gothic_m">상대 위치 이동은 원래의 목적 이외에 사용자의 창의적 응용으로 다양하게 사용될 수 있다. 대표적인 예로 지금까지 우리가 개발한 로봇 프로그램을 실행하면 반드시 특정 시작 위치로 이동 후 프로그램이 실행되었 다. 하지만 상대 위치를 이용하여 프로그램을 구현한다면 이러한 절차 없이 바로 로봇 프로그램이 실행 가 능해진다. 그 외에도 다양한 상황에서 응용이 있을 수 있다.</p>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part09-p205-img" src="../Images/part09-p205-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅸ-2&#62;</span> 상대거리 이동을 이용한 인형뽑기 게임</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_46"><span class="txtball dwhite">나</span> 폴리스코프로 상대 위치 이동 구현</h3>
+
+  <p class="txt indent1">&#60;그림 IX-3&#62;은 상대 위치로 이동하기 위한 웨이포인트 설정 방법을 나타낸 그림이다. &#60;그림 IX-3&#62; (a)는 웨이포인트를 생성하고 선택하였을 때의 세부 설정 창을 보여준다. ② 부분에서 우리는 초기 설정값을 ‘고정된 위치’를 ‘상대 위치’로 변경이 가능하다. 나머지 ‘변수 위치’를 선택하면 프로그램 내에 할당된 변수를 선택하여 그 위치로 이동할 수 있다. 상대 위치를 선택하면 웨이포인트 설정을 위한 방법이 변경된다. 더 구체적으로는 ③의 ‘시작 지점’과 ④의 ‘도착 지점’을 설정하면 그 두 위치의 변위 차를 이용하여 ⑤의 상대 위치 정보로 최종 입력된다. 이런 이유로 ‘시작 지점’과 ‘도착 지점’ 정보의 절대적인 위치 정보 자체는 특별한 의미가 없다. 시작 지점 및 도착 지점의 설정 방법은 이전에 많이 해 왔던 프리드라이브 및 이동탭에서 제공하는 기능들을 적절히 활용하는 방법으로 할 수 있다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part09-p206-img" src="../Images/part09-p206-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅸ-3&#62;</span> <span class="본문_본문_표_일반 _idGenCharOverride-3">상대 위치 설정</span></p>
+  </div>
+</body>
+</html>

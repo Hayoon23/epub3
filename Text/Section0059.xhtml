@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">1 로봇 시뮬레이션 환경 구축</span></h2>
+  </div>
+
+  <p class="txt gothic_b bgo pl1 dwhite">학습 목표</p>
+
+  <div class="box2">
+    <p class="txt gothic_m number_list ml1"><span class="color1">1.</span> UR의 시뮬레이터를 설치할 수 있다.</p>
+
+    <p class="txt gothic_m number_list ml1"><span class="color1">2.</span> 시뮬레이터를 이용하여 로봇프로그램을 작성할 수 있다.</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_78"><span class="txtball dwhite">가</span> 개요</h3>
+
+  <p class="txt indent1">산업용 로봇 시뮬레이션은 실제 로봇이 없이 컴퓨터 환경에서 로봇의 동작을 가상으로 재현하고 테스트하는 것이다. 산업용 로봇 시뮬레이션의 목적은 현실에서 일어날 수 있는 다양한 문제에 관해서 컴퓨터를 이용하여 가상으로 검증함으로써, 안전하게 로봇의 성능과 기능을 평가하고 최적화하는 데 있다. 산업용 로봇 시뮬레이션 방법에는 다양한 종류가 있으며, 산업용 로봇 시뮬레이션 tool은 일반적으로 다음과 같은 기능을 제공한다.</p>
+
+  <p class="txt bullet_list">- CAD 모델 또는 URDF 파일에서 로봇의 기구학 및 동역학 모델을 생성 및 활용</p>
+
+  <p class="txt bullet_list">- 로봇의 운동 경로 계획, 충돌 검사, 궤적 생성 및 최적화</p>
+
+  <p class="txt bullet_list">- 센서 데이터의 통합 및 외부 주변 장치와의 연계성 검증</p>
+
+  <p class="txt bullet_list">- 로봇의 제어 알고리즘을 설계, 3D 시뮬레이션 환경에서 로봇의 동작을 시각화하고 평가</p>
+
+  <p class="txt bullet_list">- ROS 또는 ROS2와 연동하여 실제 또는 가상의 로봇과 통신하고 프로그램</p>
+
+  <p class="txt bullet_list">- 모델 예측 제어, 강화 학습과 같은 고급 제어 방법 적용 검증</p>
+
+  <p class="txt bullet_list">- 실제 컨트롤러나 온보드 컴퓨터에 배포할 코드를 생성</p>
+
+  <p class="txt indent1">이러한 기능을 포함하는 산업용 로봇 시뮬레이션 툴<span class="bracket">(tool)</span>의 종류는 다양하며 대표적인 예는 아래와 같다.</p>
+
+  <p class="txt bullet_list">- MATLAB<span class="CharOverride-29">®</span> 및 Simulink<span class="CharOverride-29">®</span>: 산업용 로봇 개발을 위한 특화된 알고리즘, 시뮬레이션 툴, ROS 지원 및 하드웨어 연결을 제공</p>
+
+  <p class="txt bullet_list">- Tecnomatix<span class="CharOverride-29">®</span>: 데이터 관리 및 파일 기반 환경 모두에서 로봇 및 자동화 생산 시스템을 개발할 수 있는 솔루션을 제공</p>
+
+  <p class="txt bullet_list">- RoboDK, RobotStudio, V-REP 등 다양한 상용 또는 오픈소스 소프트웨어</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="sup-p303-img" src="../Images/sup-p303-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 별첨-1&#62;</span> MATLAB<span class="CharOverride-30">®</span> Simulink<span class="CharOverride-30">®</span>를 이용한 로봇 시뮬레이션</p>
+  </div>
+
+  <p class="txt indent1">위의 시뮬레이션 툴은 강력하고 다양한 기능을 포함하고 있다. 하지만, 이 과정을 잘 이해하고 활용하기 위해서는 상당한 시간과 노력이 필요하다. 실제와 매우 일치하지 않는 한계가 있어 실제 실험과 시뮬레이션을 병행할 필요가 있으며, 현장에서는 시뮬레이션보다는 실제 로봇을 동작시켜 기능을 검증하는 경우가 많다. 각 프로그램을 유용하게 사용하기 위해서는 상당한 학습을 요구하며, 많은 경우 개인이 구매하기에는 가격이 비교적 부담스럽다.</p>
+
+  <p class="txt indent1">UR사에서는 URSim이라는 기능적으로는 한계가 있지만, 무료로 간단히 PC 상에서 시뮬레이션을 할 수 있는 툴이 있다. 만약 지금 독자가 실제 로봇을 만질 수 없는 상황이라면, 혹은 호기심으로 간단히 경험하고 싶은 정도라면, 이 프로그램을 사용하면 유용할 것이다.</p>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_79"><span class="txtball dwhite">나</span> URSim의 설치</h3>
+
+  <p class="txt indent1">URSim은 유니버설로봇에서 제공하는 시뮬레이션 소프트웨어이다. 실제 로봇 프로그램을 수행하는 폴리스코프 환경이 그대로 제공되며, 기본적인 프로그램 방법은 실제와 같다. 다만, 시뮬레이터에는 실제 로봇 팔이 연결되어 있지 않기 때문에 발생하는 몇 가지 기능적인 제한 사항이 있다. 예를 들어 힘 제어를 하기 위해서는 내부 힘 센서에서 반환 정보 등이 필요한데, 가상 환경에서는 실시간으로 이 정보의 제공이 어려워 사용이 제한된다. 의외로 되는 것도 있는데, I/O의 사용이다. 왼쪽 하단 모서리에서 시뮬레이션 모드를 선택하면 I/O 페이지에서 디지털 입력을 시뮬레이션할 수 있다.</p>
+
+  <p class="txt indent1">프로그램을 다운로드해 보자. URSim은 UR 홈페이지의 ‘Customer Care’ 페이지에서 찾을 수 있다. 홈페이지는 구글 등 검색 사이트에서 ‘universal robots’ 등의 키워드로 검색하면 쉽게 찾을 수 있다. 홈페이지에서 관련 페이지를 찾아보면 다운로드 페이지는 &#60;그림 별첨-2&#62; (a)의 ①과 같이 ‘https://www.universal-robots.com/download/’로 연결된다. 이 다운로드 페이지에는 시뮬레이터뿐만 아니라 사용자를 위한 다양한 지원 자료가 있다. 대표적인 것으로 최신의 로봇 매뉴얼, 최신 펌웨어, 시뮬레이션 프로그램, 도면, 안전자료 등이다. URSim은 이 중 &#60;그림 별첨-2&#62; (a)의 ②의 ‘Software’를 선택한다.</p>
+
+  <p class="txt indent1">Software 폴더에는 로봇의 펌웨어를 업그레이드 혹은 신규 설치를 위한 파일, 시뮬레이션, 간단히 화면 캡처 등 기능을 수행할 수 있는 매직 파일, 로그 뷰어<span class="bracket">(Log viewer)</span> 등 로봇의 유지 관리를 위한 다양한 도구들을 제공한다. 시뮬레이터는 리눅스<span class="bracket">(linux)</span> 기반 및 비-리눅스<span class="bracket">(Non-linux)</span> 기반으로 제공된다. 독자들이 일반적으로 많이 사용하리라 예상되는 윈도우 PC 환경에서 활용하기 위해서는 ‘Non-Linux offline simulator’를 선택하여야 한다. 최신 버전을 선택하여 다운로드하도록 하자. 다운로드를 위해서는 회원가입을 반드시 해야 하며, 파일의 용량이 커서 상당한 시간이 걸릴 수 있다. 다운로드가 완료되면 압축을 해제하자.</p>
+
+  <p class="txt indent1">URsim은 기본적으로 Linux 운영 체제용으로 만들어져 있다. 마이크로소프트의 윈도우와 같이 다른 운영 체제에서 시뮬레이터를 실행하려면 ‘가상 머신’이 필요하다. 가상 머신은 기본적으로 Linux를 비롯한 여러 운영 체제를 설치할 수 있는 프로그램이다. 가장 대중적으로 많이 사용하는 가상 머신 프로그램으로 VMWare와 VirtureBox가 있으며, 어느 것을 사용하여도 무방하다.</p>
+
+  <p class="txt bullet_list">- VMWare Player: VMWare사의 프로그램으로 교육, 개발, 테스트 등의 목적으로 사용할 수 있으며, 비상업적인 개인용으로 사용하는 경우 무료</p>
+
+  <p class="txt bullet_list">- VirtualBox: Oracle이 개발하고 배포하는 오픈 소스 소프트웨어러 Windows, Linux, macOS 및 Solaris와 같은 다양한 운영 체제를 호스트 시스템에서 게스트 시스템으로 실행 가능</p>
+
+  <div class="w100 img_center">
+    <img alt="sup-p305-img" src="../Images/sup-p305-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="sup-p305-img2" src="../Images/sup-p305-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 별첨-2&#62;</span> 유니버설 로봇社의 홈페이지에서 URSim 다운로드</p>
+  </div>
+
+  <p class="txt indent1">&#60;그림 별첨-3&#62;은 다운로드된 파일의 압축 해제 후의 모습이다. 이 책에서 사용한 5.13 버전은 총 11개의 파일로 구성되어 있다. 이 구성은 버전에 따라서 달라질 수 있으므로 참조만 하자. 이 파일들은 환경 파일들로 구동을 위해서는 ‘가상 머신’이라는 프로그램이 필요하다.</p>
+
+  <div class="w70 img_center flex_column">
+    <img alt="sup-p306-img" src="../Images/sup-p306-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 별첨-3&#62;</span> URSim 파일 구성</p>
+  </div>
+</body>
+</html>

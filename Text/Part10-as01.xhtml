@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="assignment">
+    <p class="as_num">01</p>
+
+    <h3>실습과제<br/> <span class="as_title">폴더 및 서브프로그램 활용</span></h3>
+  </div>
+
+  <p class="txt gothic_b bgo pl1 dwhite">학습 목표</p>
+
+  <div class="box2">
+    <p class="txt gothic_m number_list ml1"><span class="color1">1.</span> 폴더의 필요성 및 그 활용 방법을 설명할 수 있다.</p>
+
+    <p class="txt gothic_m number_list ml1"><span class="color1">2.</span> 서브프로그램의 필요성 및 그 활용 방법을 설명할 수 있다.</p>
+
+    <p class="txt gothic_m number_list ml1"><span class="color1">3.</span> 두 점을 반복 이동하는 동작을 구현할 수 있다.</p>
+
+    <p class="txt gothic_m number_list ml1"><span class="color1">4.</span> 폴더와 서브프로그램의 차이점을 알고 적절하게 활용할 수 있다</p>
+  </div>
+
+  <p class="th1"><img alt="icon4" src="../Images/icon4.png"/> 1. 부품 및 장비</p>
+
+  <div class="img_center">
+    <img alt="part10-p216-table" src="../Images/part10-p216-table.jpg"/>
+  </div>
+
+  <p class="th1"><img alt="icon5" src="../Images/icon5.png"/> 2. 구현 동작 목표</p>
+
+  <p class="goal">학습 목표</p>
+
+  <p class="txt ml15">(7장 실습 과제와 동일) 스위치의 상태에 따라서 맨눈 검사 진행 여부 및 검사 결과에 따라 동작을 다르게 하는 동작을 구현한다. 다만, 반복되는 부분을 확인하고 폴더 혹은 서브프로그램을 적절히 활용하여 재작성한다.</p>
+
+  <p class="goal">동작 설명</p>
+
+  <p class="txt gothic_m number_list ml3">&#60;그림 Ⅹ-1&#62; 참조</p>
+
+  <p class="txt gothic_m number_list ml3">① 스위치 1(SW1)은 맨눈 검사 여부를, 스위치 2(SW2)는 불량 여부 정보를 사용자가 직접 로봇에게 제공한다.</p>
+
+  <p class="txt gothic_m number_list ml3">② (SW1, SW2는 Low 상태; 기본 동작) 로봇은 기본적으로 컨베이어벨트 우측 센서 위치에서 블록을 집고, 컨베이어벨트 좌측으로 블록을 옮겨 놓는 동작을 반복한다. 이 동작은 3장 및 4장에서 작성하였던 프로그램과 같다.</p>
+
+  <p class="txt gothic_m number_list ml3">③ 블록을 든 상태에서 맨눈 검사를 할지를 SW1을 통하여 결정한다. SW1이 High이면 맨눈 검사 위치로, Low이면 다시 블록을 기본 동작인 컨베이어벨트 좌측으로 이동시킨다. 맨눈 검사는 블록을 검사자 눈앞으로 먼저 이동시켜 회전함으로써 편하게 관찰할 수 있도록 한다. 회전이 끝나면 2~5초 사이의 대기시간이 주고, 검사자는 SW2를 이용하여 불량 여부에 대한 정보를 로봇에게 제공한다.</p>
+
+  <p class="txt gothic_m number_list ml3">④ 불량이 아닌 경우 사진과 같이 기본 동작인 컨베이어벨트 좌측 위치에 이동시킨다.</p>
+
+  <p class="txt gothic_m number_list ml3">⑤ 불량일 때는 사진과 같이 사용자가 지정한 위치에 버리는 동작을 구현한다.</p>
+
+  <div class="w80 img_center">
+    <img alt="part10-p218-img" src="../Images/part10-p218-img.jpg"/>
+  </div>
+
+  <div class="img_center flex_column">
+    <img class="w50 mcenter" alt="part10-p218-img2" src="../Images/part10-p218-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅹ-1&#62;</span> 조건 동작 구현 (&#60;그림 VII-1&#62;과 동일)</p>
+  </div>
+
+  <p class="th1"><img alt="icon6" src="../Images/icon6.png"/> 3. 실습 평가</p>
+
+  <div class="img_center">
+    <img alt="part10-p219-table" src="../Images/part10-p219-table.jpg"/>
+  </div>
+</body>
+</html>

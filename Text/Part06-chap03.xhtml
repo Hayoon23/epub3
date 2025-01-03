@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">3 자세 설정</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_37"><span class="txtball dwhite">가</span> 자세 개요</h3>
+
+  <p class="txt indent1">모든 툴이 항상 툴 플랜지에 수직 방향으로 있는 것은 아니다. &#60;그림 VI-5&#62;를 다시 한번 확인하자. 각 툴은 어느 방향을 바라보고 있는가? 툴은 많은 경우 툴 플랜지와 특정한 각도<span class="본문_단어_색변경-각주-9-5-20 CharOverride-13">(예</span><span class="본문_단어_색변경-각주-9-5-20 CharOverride-17">:</span><span class="본문_단어_색변경-각주-9-5-20 CharOverride-13"> <span class="본문_단어_색변경-각주-9-20-kor CharOverride-15">수직</span></span><span class="본문_단어_색변경-각주-9-5-20 CharOverride-13">, 45°)</span>를 유지할 필요가 발생하게 되는데, 특히 툴 플랜지와 좌표축의 어긋나있는 경우 기존의 툴 플랜지 기반의 툴 좌표계 정보만으로는 교시 작업에 어려움이 발생할 수 있다. 이때 그 툴에 해당하는 툴의 방향을 설정하면 좋다. ‘자세’ 설정은 이러한 좌표계를 설정해 주는 과정이라고 생각하면 좋다. &#60;그림 VI-12&#62;는 로봇의 현재 자세 정보를 확인할 수 있으며, RX, RY, RZ가 모두 0인 것은 툴 플랜지와 같다는 것을 의미한다. 사용하는 툴에 정확한 정보를 이미 알고 있다면 이곳에 수동 입력이 가능하다.</p>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part06-p160-img" src="../Images/part06-p160-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅵ-12&#62;</span> 자세 설정</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_38"><span class="txtball dwhite">나</span> 자세 설정</h3>
+
+  <p class="txt indent1">자세 정보의 입력을 위한 방법 역시 직접 입력 및 마법사를 사용하는 방법이 있다. 직접 입력은 해당 툴의 제작사에서 제공하는 정보를 이용하거나, 다른 측정 도구를 활용하여 계측하는 방법이다. 이 경우 역시 툴 플랜지에 장착하는 방법 등에 따라서 정보의 입력이 쉽지 않다. 반면, 마법사 기능은 비교적 편리하게 활용될 수 있다. 자세 마법사는 기준의 되는 참조 좌표계<span class="bracket">(예: 베이스 조인트, 툴 플랜지)</span>를 기준으로 하여 그 방향을 같게 위치시키면 기존에 저장된 TCP 점을 기준으로 자세 정보를 계산한다.</p>
+
+  <p class="txt indent1">설정의 순서는 다음과 같다.</p>
+
+  <p class="txt number_list ml3">① 마법사 시작<span class="bracket">(&#60;그림 VI-13&#62; (a))</span>: ‘설치-일반-TCP’에서 자세에 해당하는 ‘측정’ 마법사 버튼을 클릭한다.</p>
+
+  <p class="txt number_list ml3">② 마법사 입력 순서 확인<span class="bracket">(&#60;그림 VI-13&#62; (b))</span>: 참조하고자 하는 좌표를 선택한다. 본 예에서는 베이스를 참조하였다. 베이스 조인트 특징은 &#60;그림 II-6&#62;을 참조하자. ‘포인트 설정’ 버튼을 클릭하면 로봇 이동 창으로 바뀐다.</p>
+
+  <p class="txt number_list ml3">③ 로봇 이동<span class="본문_단어_색변경-각주-9-5-20 CharOverride-13">(&#60;<span class="본문_단어_색변경-각주-9-20-kor CharOverride-15">그림</span></span><span class="본문_단어_색변경-각주-9-5-20 CharOverride-13"> VI-13&#62;(c)</span><span class="본문_단어_색변경-각주-9-5-20 CharOverride-13">)</span>: 로봇의 자세를 참조하는 베이스와 평행하도록 위치시킨다.</p>
+
+  <div class="tip_icon3"></div>
+
+  <div class="tipbox3">
+    <p class="txt gothic_m">툴 역시 X, Y, Z의 3개 축으로 정의되어야 한다. 3개의 축을 모두 평행한 방향으로 위치시키는 것이 매우 중요하다. 만약 그렇지 않다면 사용자가 의도하지 않은 완전히 다른 방향으로 로봇이 이동할 수도 있다.</p>
+  </div>
+
+  <p class="txt number_list ml3">④ 위치 확정<span class="bracket">(&#60;그림 VI-13&#62;(d))</span>: ‘확인’ 버튼을 누르면 해당 위치 정보가 확정이 된다.</p>
+
+  <p class="txt number_list ml3">⑤ 로봇 이동 <span class="bracket">(&#60;그림 VI-13&#62; (e))</span>: 금번 측정에서 계산된 값을 확인할 수 있다.</p>
+
+  <p class="txt indent1">과정은 단순해 보이지만, 정확하게 참조점과 평행하도록 로봇을 위치시키는 일은 단순하지만은 않다.</p>
+
+  <div class="w80 img_center flex_column">
+    <img alt="part06-p162-img" src="../Images/part06-p162-img.jpg"/>
+  </div>
+
+  <div class="w80 img_center flex_column">
+    <img alt="part06-p162-img2" src="../Images/part06-p162-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅵ-13&#62;</span> 자세 설정 마법사</p>
+  </div>
+
+  <p class="txt indent1">설정된 자세는 TCP의 정의에 포함된 방향 정보이다. 따라서 &#60;그림 VI-11&#62;에서와 같이 특정 TCP를 적용함에 따라서 함께 적용된다.</p>
+
+  <div class="txtbox number_list mt2">
+    <p class="txt">1. 협동로봇을 사용하기 전에 3가지 주요 설정의 중요성을 강조한다.</p>
+
+    <p class="txt">2. 각 설정의 필요성과 미설정시 발생하는 문제점을 설명한다.</p>
+
+    <p class="txt">3. 각 설정과 관련하여 잘못된 설정에 의해서 발생하는 문제를 가능하면 실제로 보여준다.</p>
+
+    <p class="txt">4. 학생 실습 후 설정된 값에 오차를 확인하여 수정 지도한다.</p>
+
+    <p class="txt">5. 수업이 끝난 후 장비의 실습과정에서 발생할 수 있는 설정 오류를 반드시 점검하여야 한다.</p>
+  </div>
+</body>
+</html>

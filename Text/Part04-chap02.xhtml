@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">2 최적화</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_24"><span class="txtball dwhite">가</span> 필요성</h3>
+
+  <p class="txt indent1">프로그램의 최적화 여부에 따라서 로봇의 생산성은 큰 차이를 나타낼 수 있다. 예를 들어 초기 작성한 프로그램의 반복 동작 하나에 60초가 걸린다고 가정해보자. 이 프로그램은 1시간에 60개의 제품의 제작이 가능하며, 하루로 가정하면 1,440개가 가능하다. 이 동작을 최적화하여 30초로 단축한다면 1시간에 120개, 하루 동안은 무려 2,880개의 제품의 생산이 가능하다. 하나의 반복 동작은 비록 30초의 짧은 시간이지만, 하루가 누적되면 12시간의 효과가 발생하는 것이며, 생산으로 치면 1,440개의 제품이 매일 더 생산될 수 있는 것이다. 1년이면 무려 4,380시간의 차이가 발생한다.</p>
+
+  <p class="txt indent1">최적화는 시작은 프로그램의 작성부터 적절한 이동 궤적 및 명령어 적용으로부터 시작한다. 작성이 완료된 이후 반지름 혼합을 통하여 동작을 효율화한다. 마지막 수단으로 필요한 경우 추가로 적절한 이동 속도를 적용하여 더욱 최적화할 수 있다.</p>
+
+  <div class="w70 img_center flex_column">
+    <img alt="part04-p096-img" src="../Images/part04-p096-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅳ-5&#62;</span> 로봇 최적화를 통한 생산 효율 증대</p>
+  </div>
+
+  <div class="tip_icon3"></div>
+
+  <div class="tipbox3">
+    <p class="txt gothic_m">생산제조 공정은 로봇뿐만 아니라 다양한 장치가 연계되어 동작한다. 로봇만 최적화되었다고 하더라도 연계 되는 장치에서 병목이 발생한다면 제품 생산 측면에서는 최종적으로 향상이 없을 수도 있다. 그러므로 필요 이상으로 이동 속도를 높이면 단순히 로봇의 수명만 단축되는 결과를 초래할 수 있으므로 주의하도록 하자.</p>
+  </div>
+
+  <p class="txt">&#160;</p>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_25"><span class="txtball dwhite">나</span> 반지름 혼합</h3>
+
+  <p class="txt indent1">적절한 반지름 혼합을 통하여 로봇의 동작을 최적화할 수 있다. &#60;그림 IV-6&#62;은 반지름 혼합의 예를 보여준다. &#60;그림 IV-6&#62; (a)는 반지름 혼합을 하였을 때 로봇의 궤적 변화이다. 반지름 혼합은 Move 명령어가 아닌 웨이포인트에서 설정한다. 반지름을 혼합한 웨이포인트에서 로봇은 사용자가 설정한 반지름값에 따라서 호를 그리는 궤적으로 이동한다. 이 궤적 이동은 단순히 이동 경로가 짧아지는 것 이상의 효과가 있다. 반지름 혼합이 없다면 로봇은 꼭짓점에 해당하는 웨이포인트에서 반드시 ‘정지’하게 된다. 이를 위해서 로봇은 ‘가속’, ‘감소’, ‘정지’의 과정을 거치게 된다. 이때 반지름 혼합은 이동 경로를 줄이는 것뿐만 아니라, 동작마다 누적되는 ‘이 정지를 위한 동작을 위해 필요한 시간 손실’을 줄여준다. 또한 이 반지름 혼합을 적절히 활용하는 것은 모터의 부담을 줄이는 부가적인 효과도 가지게 되므로, 적절히 잘 활용하는 것이 좋다.</p>
+
+  <p class="txt indent1">&#60;그림 IV-6&#62; (b)는 반지름 혼합을 사용하는 방법이다. 반지름 혼합은 혼합되는 ‘위치’ 변수에 설정된다. 먼저 ①의 혼합하고자 하는 웨이포인트 변수를 선택하고, ②의 반지름 혼합을 선택하여 정보를 입력하면 된다. 적절하지 않은 반지름 길이 입력 및 선택한 웨이포인트에서 변경 경로의 각도가 예각일 경우 문제가 발생할 수 있으므로, 주의하여 사용하여야 한다.</p>
+
+  <div class="w80 img_center flex_column">
+    <img alt="part04-p098-img" src="../Images/part04-p098-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅳ-6&#62;</span> 반지름 혼합</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_26"><span class="txtball dwhite">다</span> 이동 속도 변경</h3>
+
+  <p class="txt indent1">작업자 입장에서 반복 동작의 시간을 단축하기 위해 제일 먼저 생각하는 방법은 이동 속도 자체를 높이는 것일 것이다. 하지만 실제로 불필요하게 높은 이동 속도는 산업 안전 측면에서도 좋지 못하며, 로봇의 수명과도 관계가 있으므로 최종적인 방법으로 고려하는 것이 좋다. 먼저 로봇이 이동하는 궤적에 군더더기가 없는지를 살펴보고, 두 번째로 반지름 혼합 등을 사용하여 불필요한 가속, 감속, 정지 등을 없애고, 최종적으로 로봇 동작에 필요한 시간을 고려하여 속도를 변경해야 한다.</p>
+
+  <p class="txt indent1">속도 설정은 이동 명령어마다 약간의 차이가 있다. &#60;그림 IV-7&#62;은 이동 명령어의 종류에 따른 속도 설정 방법을 보여준다. 먼저 MoveJ는 조인트별 각속도 및 각가속도로 정의된다. MoveL의 경우 TCP 기준에서 속도 및 가속도로 정의된다. MoveP는 MoveL과 유사하지만, 여기에 혼합되는 반지름의 길이 정보가 추가된다. 이러한 차이가 생기는 것은 각 이동 명령어의 이동 특성과 연관해서 생각해보면 쉽게 이해할 수 있다. MoveJ는 기본적으로 조인트 중심의 이동이므로 회전 운동을 위한 각도 기준으로 설정하며, MoveL 및 MoveP는 TCP의 이동 경로 중심이므로 미터 단위의 속도로 설정한다.</p>
+
+  <div class="w100 img_center">
+    <img alt="part04-p099-img" src="../Images/part04-p099-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center">
+    <img alt="part04-p100-img1" src="../Images/part04-p100-img1.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part04-p100-img2" src="../Images/part04-p100-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅳ-7&#62;</span> 이동 속도 변경</p>
+  </div>
+</body>
+</html>

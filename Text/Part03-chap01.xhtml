@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title>1212</title>
+  <link href="../Styles/PY_Ebook_Basic_Style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="box1 bg1">
+    <h2 class="txt2"><span class="dgray1">0</span><span class="dwhite">1 외부 장치의 연결</span></h2>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_17"><span class="txtball dwhite">가</span> 컨트롤 박스 I/O</h3>
+
+  <p class="txt indent1">&#60;그림 III-2&#62;는 UR3e의 컨트롤 박스 내부 I/O 접점 사진이다. 전반적인 구성은 1장을 참조하자. 이 I/O는 공압 릴레이, PLC 및 비상정지 버튼을 포함한 다양한 장비와 연결하여 사용할 수 있다. 크게는 안전 I/O, 컨피규어러블 I/O, 범용 I/O로 구분할 수 있으며, 범용 I/O는 다시 디지털과 아날로그로 구분할 수 있다. &#60;그림 III-2&#62; (b)는 실제 외부 장치와 결선을 한 사진이다.</p>
+
+  <div class="w90 img_center">
+    <img alt="part03-p070-img1" src="../Images/part03-p070-img1.jpg"/>
+  </div>
+
+  <div class="w70 img_center flex_column">
+    <img alt="part03-p070-img2" src="../Images/part03-p070-img2.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅲ-2&#62;</span> 컨트롤 박스 I/O 접점 사진 및 연결</p>
+  </div>
+
+  <p class="txt indent1">먼저 안전 I/O에 대해서 알아보자. 안전 I/O는 전용 안전 입력과 컨피규어러블 I/O가 있다. 컨피규어러블 I/O는 사용자 설정에 따라서 안전 혹은 범용적인 용도로 사용자 설정에 따라 사용할 수 있다. 구동 전압은 디지털 I/O와 같이 24V이다. 안전 I/O는 범용 I/O와는 달리 반드시 쌍을 이루며 결선해야 하여 하나의 신호를 전달하기 위해서 총 4개의 접점이 필요하다. 이는 단일선<span class="bracket">(2개 접점)</span>으로 구성하였을 때 발생할 수 있는 신호선 하나의 결함으로 인해서 제대로 기능하지 못하는 상황을 방지하기 위해서이다. 또한 안전 관련 접점은 반드시 B 접점으로 구현되어야 하며, 따라서 평상시 High 입력인 24V가 입력되어야 시스템이 동작한다. 유니버설로봇의 경우 두 가지 영구 안전 입력 형식이 있으며, 각각 비상정지 장치 전용의 ‘로봇비상정지’와 보호 장치용 ‘세이프가드 정지’이다. ‘로봇비상정지’는 비상정지 버튼에 의한 긴급 정지 상황이 그 예가 될 수 있다. ‘세이프가드 정지’는 안전 방지를 위한 도어락이 있는 문이 열릴 때 로봇이 정지하는 도어 스위치가 그 대표적인 예라 할 수 있다. 그 기능의 차이는 아래의 &#60;표 Ⅲ-1&#62;과 같이 정리할 수 있다.</p>
+
+  <div class="tip_icon2"></div>
+
+  <div class="tipbox2">
+    <p class="txt gothic_m">접점 스위치는 전기 회로를 열거나 닫는 역할을 하는 부품이다. 접점 스위치에는 A 접점과 B 접점이라 는 두 가지 종류가 있다. A 접점은 스위치가 작동할 때 회로를 닫는 접점이고, B 접점은 스위치가 작동할 때 회로를 여는 접점이다. 예를 들어, 비상 정지 버튼은 일반적으로 B 접점 스위치를 사용하여 기계의 전원을 차단하는데, 이는 정전 등 비상 상황에서 위험을 예방할 수 있다. 반면에, A 접점 스위치의 경우 사용자 입장에서 직관적이므로 전원 버튼 등 일반적인 용도로 많이 사용한다.</p>
+  </div>
+
+  <p class="imgcaption2"><span class="gothic_b dblue">&#60;표 Ⅲ-1&#62;</span> 안전 I/O의 차이</p>
+
+  <table class="table2-col2">
+    <colgroup>
+      <col/>
+
+      <col/>
+
+      <col/>
+    </colgroup>
+
+    <tbody>
+      <tr>
+        <td>
+          <p class="txt tcenter">구분</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">비상 정지</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">세이프가드 정지</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">로봇이 이동을 멈춤</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">예</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">예</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">프로그램 실행</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">일시 정지</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">일시 정지</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">구동력</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">꺼짐</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">켜짐</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">초기화</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">수동</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">자동 혹은 수동</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">사용빈도</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">빈번하지 않음</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">모든 사이클에서 드물게</p>
+
+          <p class="txt tcenter">(Every cycle to infrequent)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="txt tcenter">재초기화 필요성</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">브레이크 해제</p>
+        </td>
+
+        <td>
+          <p class="txt tcenter">아니요</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="txt indent1">&#60;그림 III-3&#62; (a)는 ‘로봇비상정지’ I/O의 대표적인 결선도 예시이다. EI0과 EI1가 쌍을 이뤄서 동작하는 접점은 반드시 두 I/O 모두 High 입력에서만 로봇이 정상 동작한다. 일반적으로 스위치는 2개의 출력을 가지는 비상정지 버튼용 제품을 사용하는데, 스위치 양단은 각각 전원의 High 신호와 다른 쪽은 로봇의 안전 I/O 접점과 연결된다. 이 경우 스위치 내부의 하나만이라도 열림 상태<span class="bracket">(Open)</span>가 되더라도 정지 동작이 이루어진다. &#60;그림 III-3&#62; (b)는 2개 이상의 버튼에 대한 배선도이다. 직렬로 연결된 스위치에 의해서 어느 한 스위치만 열리더라도 입력 신호가 Low가 되는 동작이 가능하다. 이 외의 기타 목적의 결선 방법<span class="bracket">(PLC와 안전 배선 연결 등)</span>에 대해서는 각 로봇 제조사의 공식 매뉴얼을 확인하도록 한다.</p>
+
+  <div class="w80 img_center flex_column">
+    <img alt="part03-p072-table" src="../Images/part03-p072-table.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅲ-3&#62;</span> 안전 I/O 접점 결선 예<br/>(출처: Universal Robots社 User Manual)</p>
+  </div>
+
+  <p class="txt indent1">디지털 및 아날로그 신호를 포함한 범용 I/O는 &#60;그림 III-4&#62;의 회색 및 녹색의 접점들이다. 이 I/O는 공압식 렐레이, 센서, 엑츄에이터 등과 같은 장비를 직접 구동 및 활용하거나, 다른 PLC 시스템과의 통신을 위해서도 사용할 수 있다. &#60;그림 III-4&#62;는 범용 I/O의 결선 예들을 보여준다. 먼저 그림 &#60;그림 III-4&#62; (a)의 디지털 I/O의 경우 가까이에 존재하는 24V 신호선과 연결하여 사용할 수 있다. 스위치를 눌러서 연결되면 입력에는 24V 신호가 입력되게 되고, High로 인식하게 된다. 반대로 스위치로 연결되지 않아 입력 신호에 아무런 신호가 연결되어 있지 않다면 Low로 인식된다. &#60;그림 III-4&#62; (b)의 디지털 출력은 가까이 0V(GND)가 있으며 그림과 같이 결선하여 이용할 수 있는데, 사용자가 High 출력을 주면 부하에 전류가 발생하여 동작하게 된다. &#60;그림 III-4&#62; (c)는 아날로그 입력의 결선 예이다. 아날로그 입력의 경우 입력 단자와 함께 바로 옆에 있는 AG 단자를 연결하여야 한다. 각종 아날로그 센서 출력과 연결하여 사용할 수 있다. &#60;그림 III-4&#62; (d)는 아날로그 출력의 결선 예이다. 아날로그 입력과 출력의 범위는 반드시 로봇의 매뉴얼을 참조하도록 한다. UR3e의 경우 전압 모드에서 아날로그 입출력 모두 10V까지 허용하지만, 전류 모드에서는 조금 다르다. 허용 범위를 넘는 경우 로봇 하드웨어의 전기 계통에 문제를 일으킬 수 있으므로 꼭 주의하자.</p>
+
+  <div class="w90 img_center flex_column">
+    <img alt="part03-p073-img" src="../Images/part03-p073-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅲ-4&#62;</span> 범용 I/O 접점 결선 예<br/>(출처: Universal Robots社 User Manual)</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_18"><span class="txtball dwhite">나</span> I/O 탭 신호 관찰</h3>
+
+  <p class="txt indent1">폴리스코프의 I/O 탭에서 입력에 대해서는 관찰이, 출력은 제어할 수 있다. &#60;그림 III-5&#62;는 외부 장치를 로봇에 연결하였을 때 상태 변화를 보기 위해서 상황별로 정리한 그림이다. 좌측의 사진은 제어 입력이고 우측의 사진은 그 입력에 따른 상태 변화로 정리하였다. 그림 &#60;그림 III-5&#62; (a)의 좌측 사진은 본 실습에서 사용한 스위치 박스의 사진이다. ‘스위치 박스’는 실습을 위해서 &#60;그림 III-4&#62;에서 언급한 형태로 배선하여 만든 장치이다. 이 스위치 박스에는 아날로그 0번의 입력<span class="bracket">(AI0)</span>과 출력<span class="bracket">(AO0)</span>이 좌측 위로 배치되어 있다. AI0는 단순히 다이얼 형식으로 10V 전압을 가변할 수 있도록 설계되어 있다. AO0는 아날로그 출력을 관찰할 수 있도록 LED를 연결하였으며, 출력 전압의 크기에 따라서 밝기가 변화한다. 그 아래로 2개의 디지털 출력 <span class="bracket">(DO0, DO1)</span>을 LED로 연결하였다. 출력값에 따라서 LED가 켜지거나 꺼진다. 스위치박스 좌측 제일 아래에는 디지털 입력 <span class="bracket">(DI0, DI1)</span>을 스위치로 연결하였다. 스위치를 올리거나 내림으로써 사용자가 로봇에게 정보를 전달할 수 있다. 스위치 박스의 우측 사진은 I/O 탭의 초기 화면 사진이며, 아무런 입력 및 출력이 없는 상태이다.</p>
+
+  <p class="txt indent1">&#60;그림 III-5&#62; (b)는 스위치 박스의 디지털 입력 0<span class="bracket">(DI0)</span>에 연결된 스위치를 ON 상태로 변경하였을 때의 모습이다. 우측의 I/O 탭에서도 실시간으로 변경 상태를 확인할 수 있는데, 해당 라디오 버튼의 상태가 변화한 것을 확인할 수 있다. 마찬가지로 DI1을 ON하면 I/O 탭의 해당 라디오 버튼이 실시간 변경될 것이다. 이 기능을 사용하여 본격적인 프로그래밍 전에 센서 등의 결선 상태 및 연결된 장치의 정상 동작 여부를 간단히 확인할 수 있어 활용도가 높다.</p>
+
+  <p class="txt indent1">&#60;그림 III-5&#62; (c)는 I/O 탭에서 디지털 출력 0<span class="bracket">(DO0)</span>의 값을 강제로 HIGH로 변경하였을 때의 모습이다. 이 I/O에 연결된 스위치 박스의 해당 LED가 켜지는 것을 확인할 수 있다.</p>
+
+  <p class="txt indent1">&#60;그림 III-5&#62; (d)는 스위치 박스의 아날로그 입력 다이얼을 돌렸을 때 I/O 탭의 변화 모습이다. 본 교재에서 활용하는 스위치 박스는 다이얼에 따라서 10V 내에서 전압의 크기가 선형적으로 변화하도록 가변 저항을 사용하여 회로를 구성하였다. 입력 전압에 따라서 수평 바 형식으로 변화가 나타남을 알 수 있다.</p>
+
+  <p class="txt indent1">&#60;그림 III-5&#62; (e)는 I/O 탭에서 아날로그 출력 0을 변경하였을 때 스위치 박스의 LED의 밝기가 변경됨을 확인할 수 있다.</p>
+
+  <div class="tip_icon"></div>
+
+  <div class="tipbox">
+    <p class="txt gothic_m">I/O 탭의 입력으로 표시된 것들은 실제 티치 팬던트의 해당 위치를 터치해도 변화가 없다. 입력은 외부에서 신호가 결정되는 것으로 수동적인 것이며, 관찰만 가능하다. 반면 출력으로 표시된 것들은 로봇에서 외부 로 신호를 능동적으로 제어하는 접점으로 티치 팬던트의 해당 버튼 등을 클릭하여 제어가 가능하다.</p>
+  </div>
+
+  <div class="w100 img_center">
+    <img alt="part03-p075-img" src="../Images/part03-p075-img.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part03-p076-img" src="../Images/part03-p076-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅲ-5&#62;</span> 아날로그 및 디지털 I/O 결선 및 신호 관찰</p>
+  </div>
+
+  <h3 class="section gothic_b f115" id="sigil_toc_id_19"><span class="txtball dwhite">다</span> I/O 이름 변경</h3>
+
+  <p class="txt indent1">모든 프로그래밍에 있어서 변수명의 선정은 매우 중요하다. 적절하고 이해하기 좋은 이름은 프로그램의 가독성을 높여 프로그램 작성 때뿐만 아니라, 유지와 관리 시에도 큰 도움이 된다. I/O 이름 역시 일종의 변수이다. 기본적으로 이 이름은 ‘Digital input 1’ 등의 형식으로 되어 있지만, 그대로 프로그램에 사용하면 해당 I/O의 사용 목적 및 기능을 이해하기 어려워진다. 예를 들어 문에 연결된 광센서라면 ‘Door_Sensor’ 등으로 정한다면 훨씬 더 프로그램을 이해하고 작성하기 쉬워질 것이다.</p>
+
+  <p class="txt indent1">이런 I/O의 이름 변경은 ‘설치 탭’에서 가능하다. &#60;그림 III-6&#62; (a)는 I/O 변경 기능의 위치를 보여준다. 설치 탭-일반-I/O설정을 차례로 선택하면 된다. 우측으로 입력과 출력을 나눠서 모든 I/O가 나타나는데, 사진에서는 DI2를 선택하였다. DI2는 ‘digital input 2’를 의미한다. 대략 ‘D’는 ‘digital’, ‘A’는 ‘analog’, ‘T’는 ‘Tool’, ‘I’는 ‘input’, ‘O’는 ‘output’이라고 생각하면 된다. 이름을 바꾸기 위해서는 ‘이름 바꾸기’ 아래의 공간을 클릭하면 된다. &#60;그림 III-6&#62; (b)는 위를 클릭하였을 때 나타나는 키보드 화면이다. 폴리스코프의 인터페이스는 한글을 지원하지만, 변수명은 ‘한글’은 지원하지 않는다. 주의하도록 하자. 그림에서는 이름을 ‘sensor’로 변경하였다. 키보드의 ‘제출’을 클릭하면 완료된다. &#60;그림 III-6&#62; (c)는 I/O 탭에서 바뀐 이름이 적용된 모습이다.</p>
+
+  <div class="w100 img_center ">
+    <img alt="part03-p077-img1" src="../Images/part03-p077-img1.jpg"/>
+  </div>
+
+  <div class="w100 img_center ">
+    <img alt="part03-p077-img2" src="../Images/part03-p077-img2.jpg"/>
+  </div>
+
+  <div class="w100 img_center flex_column">
+    <img alt="part03-p078-img" src="../Images/part03-p078-img.jpg"/> 
+
+    <p class="imgcaption"><span class="gothic_b dblue">&#60;그림 Ⅲ-6&#62;</span> I/O 이름 변경</p>
+  </div>
+</body>
+</html>
